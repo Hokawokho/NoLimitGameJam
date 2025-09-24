@@ -2,7 +2,12 @@ namespace Enums
 {
     public class nlEnum
     {
-        
+
+        public enum IngiType
+        {
+            Onion
+        }
+
         public enum SoundType
         {
             Fire,
@@ -48,14 +53,9 @@ namespace Enums
         }
         public enum PoolObjectTypes
         {
-            Enemy,
-            Bullet,
-            Coin,
-            Spell,
-            Bomb,
-            Audio,
-            BulletHitParticle,
-            EnemyHitParticle
+            Cheese,
+            Onion,
+            Tomate
         }
         public enum PowerCardsId
         {

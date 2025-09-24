@@ -18,18 +18,18 @@ namespace Gameplay
 
         public void BackToPool()
         {
-            _pool.AddBackToList(this , GetPoolTypeByParticleType());
+           // _pool.AddBackToList(this , GetPoolTypeByParticleType());
         }
 
-        private nlEnum.PoolObjectTypes GetPoolTypeByParticleType()
-        {
-            return particleType switch
-            {
-                nlEnum.InGameParticleType.BulletHit => nlEnum.PoolObjectTypes.BulletHitParticle,
-                nlEnum.InGameParticleType.EnemyHit => nlEnum.PoolObjectTypes.EnemyHitParticle,
-                _ => throw new ArgumentOutOfRangeException()
-            };
-        }
+        //private nlEnum.PoolObjectTypes GetPoolTypeByParticleType()
+        //{
+        //    return particleType switch
+        //    {
+        //        nlEnum.InGameParticleType.BulletHit => nlEnum.PoolObjectTypes.BulletHitParticle,
+        //        nlEnum.InGameParticleType.EnemyHit => nlEnum.PoolObjectTypes.EnemyHitParticle,
+        //        _ => throw new ArgumentOutOfRangeException()
+        //    };
+        //}
 
         public void Play(Vector3 newPos, Quaternion rotation = default)
         {
