@@ -7,7 +7,7 @@ public class IngiObj : MonoBehaviour, IPoolableObjects
 {
 
     [SerializeField] int value;
-    [SerializeField] int height;
+    [SerializeField] public int height;
 
     [SerializeField] nlEnum.PoolObjectTypes ingiName;
 
