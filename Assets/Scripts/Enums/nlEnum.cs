@@ -2,7 +2,19 @@ namespace Enums
 {
     public class nlEnum
     {
+        public enum GameSounds
+        {
+            TrashClick,
+            IngiStack,
+            IngiClick,
+            Bell
+        }
 
+        public enum GameSoundTypes
+        {
+            Sfx,
+            Music
+        }
         public enum IngiType
         {
             Onion
