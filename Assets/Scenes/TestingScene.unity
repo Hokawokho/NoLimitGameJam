@@ -384,7 +384,7 @@ MonoBehaviour:
   poolObjectDataList:
   - prefab: {fileID: 6726595457265301745, guid: ba4fb1b23bdc9094b971f7492f5ff34b, type: 3}
     spawnParent: {fileID: 2070773045}
-    initialSpawnCount: 10
+    initialSpawnCount: 9
     poolObjectType: 0
 --- !u!4 &2070773045
 Transform:
