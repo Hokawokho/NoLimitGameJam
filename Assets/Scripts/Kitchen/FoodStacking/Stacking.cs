@@ -20,11 +20,13 @@ public class Stacking : MonoBehaviour
 
     private float maxRandomValue = +0.5f;
 
+    private float initialX;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Start()
     {
-        
+        float initialX = transform.position.x;
     }
 
     // Update is called once per frame
@@ -42,21 +44,25 @@ public class Stacking : MonoBehaviour
         o.gameObject.SetActive(true); 
 
         o.transform.position = transform.position;
-        
+        Animator animator = o.GetComponentInChildren<Animator>();
+        //animator.ResetTrigger("stacking");
+
         IngiObj ingredientStats = o.GetComponent<IngiObj>();
         int h = ingredientStats.height;
 
-        SpriteRenderer ingredientSprite = o.GetComponent<SpriteRenderer>();
+        SpriteRenderer ingredientSprite = o.GetComponentInChildren<SpriteRenderer>();
         ingredientSprite.sortingOrder =layerCounter;
+        
+        //animator.SetTrigger("stacking");
 
 
-        float number = Random.Range(-1.0f, 3.0f);
+        float number = Random.Range(-0.5f, 0.5f);
 
         switch (h)
         {
             case (1):
 
-                transform.position = new Vector3(transform.position.x + number,
+                transform.position = new Vector3(initialX + number,
                                                  transform.position.y + increment1,
                                                  transform.position.z 
                                                  );
