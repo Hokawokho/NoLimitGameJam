@@ -15,5 +15,5 @@ MonoBehaviour:
   data:
   - value: 10
     inrgidientType: 0
-  - value: -10
+  - value: -5
     inrgidientType: 2

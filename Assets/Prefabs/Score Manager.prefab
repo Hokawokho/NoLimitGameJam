@@ -44,6 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a0c1b06095354ad7b3a348db285a54a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
+  foodQualityBar: {fileID: 0}
+  foodQualityBarFill: {fileID: 0}
+  expectedScoreLabel: {fileID: 0}
+  goodColor: {r: 0.5629722, g: 1, b: 0.25098038, a: 1}
+  badColor: {r: 1, g: 0.2509804, b: 0.28627452, a: 1}
   mealScore: 0
-  expectedScore: 0
+  expectedScore: 50
+  foodQualityBarSpeed: 5
