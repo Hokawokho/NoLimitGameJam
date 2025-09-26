@@ -8,6 +8,12 @@ public class IngridientData
 {
     public int value;
     public nlEnum.PoolObjectTypes inrgidientType;
+
+    public IngridientData() { }
+    public IngridientData(int value, nlEnum.PoolObjectTypes inrgidientType) { 
+        this.value = value;
+        this.inrgidientType = inrgidientType;
+    }
 }
 
 [CreateAssetMenu(fileName = "IngridientsDatas", menuName = "Scriptable Objects/IngridientsDatas")]
@@ -18,6 +24,7 @@ public class IngridientsDatas : ScriptableObject
 
     public IngridientData GetIngridient()
     {
-        return data[UnityEngine.Random.Range(0, data.Count)];
+        var rand = data[UnityEngine.Random.Range(0, data.Count)];
+        return new IngridientData(rand.value, rand.inrgidientType) { }; ;
     }
 }
