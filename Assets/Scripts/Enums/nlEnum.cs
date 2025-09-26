@@ -54,7 +54,15 @@ namespace Enums
             Cheese,
             CheeseRed,
             Onion,
-            Tomate,
+            BadEgg,
+            BadFish,
+            BadSteak,
+            Beetroot,
+            Broccoli,
+            Boot,
+            Eyeball,
+            Rat,
+            Spaghetti,
             AudioObject
         }
 

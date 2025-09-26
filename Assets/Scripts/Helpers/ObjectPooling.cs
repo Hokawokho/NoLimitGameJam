@@ -28,6 +28,14 @@ namespace Gameplay
 
         private List<IngiObj> ingredientListPoolCheese = new List<IngiObj>();
         private List<IngiObj> ingredientListPoolOnion = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolBadEgg = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolBadFish = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolBadSteak = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolBeetroot = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolEyeball = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolRat = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolSpaghetti = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolBoot = new List<IngiObj>();
         private List<AudioObject> audioObjectPool = new List<AudioObject>();
        
 
@@ -67,7 +75,43 @@ namespace Gameplay
                     var onion = (IngiObj)poolObject;
                     ingredientListPoolOnion.Add(onion);
                     break;
+                case nlEnum.PoolObjectTypes.BadEgg:
+                    var bEgg = (IngiObj)poolObject;
+                    ingredientListPoolOnion.Add(bEgg);
+                    break;
+                case nlEnum.PoolObjectTypes.BadFish:
+                    var bFish = (IngiObj)poolObject;
+                    ingredientListPoolOnion.Add(bFish);
+                    break;
+                case nlEnum.PoolObjectTypes.Beetroot:
+                    var beetroot = (IngiObj)poolObject;
+                    ingredientListPoolOnion.Add(beetroot);
+                    break;
+                case nlEnum.PoolObjectTypes.Boot:
+                    var boot = (IngiObj)poolObject;
+                    ingredientListPoolOnion.Add(boot);
+                    break;
+                case nlEnum.PoolObjectTypes.Broccoli:
+                    var broco = (IngiObj)poolObject;
+                    ingredientListPoolOnion.Add(broco);
+                    break;
+                case nlEnum.PoolObjectTypes.Eyeball:
+                    var eyeball = (IngiObj)poolObject;
+                    ingredientListPoolOnion.Add(eyeball);
+                    break;
+                
+                case nlEnum.PoolObjectTypes.Rat:
+                    var rat = (IngiObj)poolObject;
+                    ingredientListPoolOnion.Add(rat);
+                    break;
+                
+                case nlEnum.PoolObjectTypes.Spaghetti:
+                    var spaghetti = (IngiObj)poolObject;
+                    ingredientListPoolOnion.Add(spaghetti);
+                    break;
+
                     
+
                 case nlEnum.PoolObjectTypes.AudioObject:
                     var audio = (AudioObject)poolObject;
                     audioObjectPool.Add(audio);

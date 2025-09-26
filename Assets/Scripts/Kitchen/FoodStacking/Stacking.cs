@@ -51,6 +51,7 @@ public class Stacking : MonoBehaviour
 
         o.transform.position = transform.position;
         Animator animator = o.GetComponentInChildren<Animator>();
+        //Animator animator = o.GetComponent<Animator>();
         //animator.ResetTrigger("stacking");
 
         IngiObj ingredientStats = o.GetComponent<IngiObj>();
