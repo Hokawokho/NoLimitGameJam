@@ -4,7 +4,8 @@ namespace Enums
     {
         public enum GameSounds
         {
-            TrashClick,
+            TrashClickSuccess,
+            TrashClickFail,
             IngiStack,
             IngiClick,
             Bell

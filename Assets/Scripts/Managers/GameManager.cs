@@ -14,15 +14,9 @@ public class GameManager : MonoBehaviour
     //}
     [SerializeField] SoundsHolder sounds;
 
-    private void Awake()
+    private void Start()
     {
         SoundsManager.Instance.Init(sounds);
-    }
-    void Start()
-    {
-        //await Task.Delay(500);
-        ////var o = ObjectPooling.Instance.GetIngiPrefab();
-        ////o.gameObject.SetActive(true);   
     }
 
     // Update is called once per frame
