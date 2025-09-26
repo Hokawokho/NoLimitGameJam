@@ -5,11 +5,18 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    async void Start()
+    //async void Start()
+    //{
+    //    //await Task.Delay(500);
+    //    ////var o = ObjectPooling.Instance.GetIngiPrefab();
+    //    ////o.gameObject.SetActive(true);   
+    //}
+
+    void Start()
     {
-        await Task.Delay(500);
-        var o = ObjectPooling.Instance.GetIngiPrefab();
-        o.gameObject.SetActive(true);   
+        //await Task.Delay(500);
+        ////var o = ObjectPooling.Instance.GetIngiPrefab();
+        ////o.gameObject.SetActive(true);   
     }
 
     // Update is called once per frame
