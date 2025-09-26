@@ -1,4 +1,5 @@
 using System;
+using Enums;
 using Gameplay;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -34,13 +35,18 @@ public class Stacking : MonoBehaviour
     {
         if (Keyboard.current.sKey.wasPressedThisFrame)
         {
-            ShowFood();
+            ShowFood(nlEnum.PoolObjectTypes.Cheese);
+        }
+
+        if (Keyboard.current.aKey.wasPressedThisFrame)
+        {
+            ShowFood(nlEnum.PoolObjectTypes.Onion);
         }
     }
 
-    public void ShowFood()
+    public void ShowFood(nlEnum.PoolObjectTypes ingiFromTrash)
     {
-        var o = ObjectPooling.Instance.GetIngiPrefab();
+        var o = ObjectPooling.Instance.GetIngiPrefab(ingiFromTrash);
         o.gameObject.SetActive(true); 
 
         o.transform.position = transform.position;

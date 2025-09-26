@@ -26,7 +26,8 @@ namespace Gameplay
         [SerializeField] private List<PoolObjectData> poolObjectDataList;
 
 
-        private List<IngiObj> ingredientListPool = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolCheese = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolOnion = new List<IngiObj>();
         private List<AudioObject> audioObjectPool = new List<AudioObject>();
        
 
@@ -59,8 +60,14 @@ namespace Gameplay
             {
                 case nlEnum.PoolObjectTypes.Cheese:
                     var enemy = (IngiObj)poolObject;
-                    ingredientListPool.Add(enemy);
+                    ingredientListPoolCheese.Add(enemy);
                     break;
+
+                case nlEnum.PoolObjectTypes.Onion:
+                    var onion = (IngiObj)poolObject;
+                    ingredientListPoolOnion.Add(onion);
+                    break;
+                    
                 case nlEnum.PoolObjectTypes.AudioObject:
                     var audio = (AudioObject)poolObject;
                     audioObjectPool.Add(audio);
@@ -73,13 +80,13 @@ namespace Gameplay
             switch (poolObjectType)
             {
                 case nlEnum.PoolObjectTypes.Cheese:
-                    if (ingredientListPool.Count < 2)
+                    if (ingredientListPoolCheese.Count < 2)
                     {
                         var poolObjectData = GetPoolProjectData(nlEnum.PoolObjectTypes.Cheese);
                         Spawn(poolObjectData.prefab, 10, poolObjectData.poolObjectType, poolObjectData.spawnParent);
                     }
-                    var enemy = ingredientListPool[0];
-                    ingredientListPool.Remove(enemy);
+                    var enemy = ingredientListPoolCheese[0];
+                    ingredientListPoolCheese.Remove(enemy);
                     enemy.SetParent(null);
                     return enemy;
                     //default:
@@ -87,14 +94,14 @@ namespace Gameplay
 
 
                 case nlEnum.PoolObjectTypes.Onion:
-                    if (ingredientListPool.Count < 2)
+                    if (ingredientListPoolOnion.Count < 2)
                         //DO SEPARATE LIST FOR EACH INGRIDIENT
                     {
                         var poolObjectData = GetPoolProjectData(nlEnum.PoolObjectTypes.Onion);
                         Spawn(poolObjectData.prefab, 10, poolObjectData.poolObjectType, poolObjectData.spawnParent);
                     }
-                    var onion = ingredientListPool[0];
-                    ingredientListPool.Remove(onion);
+                    var onion = ingredientListPoolOnion[0];
+                    ingredientListPoolOnion.Remove(onion);
                     onion.SetParent(null);
                     return onion;
 
@@ -121,9 +128,9 @@ namespace Gameplay
         }
 
 
-        public IngiObj GetIngiPrefab()
+        public IngiObj GetIngiPrefab(nlEnum.PoolObjectTypes ingiType)
         {
-            return (IngiObj)GetObjectFromPool(nlEnum.PoolObjectTypes.Cheese);
+            return (IngiObj)GetObjectFromPool(ingiType);
         }
 
        
@@ -134,7 +141,7 @@ namespace Gameplay
                 case nlEnum.PoolObjectTypes.Cheese:
                     var enemy = (IngiObj)poolable;
                     ResetObjects(enemy.gameObject , nlEnum.PoolObjectTypes.Cheese);
-                    ingredientListPool.Add(enemy);
+                    ingredientListPoolOnion.Add(enemy);
                     break;
 
                 case nlEnum.PoolObjectTypes.AudioObject:
