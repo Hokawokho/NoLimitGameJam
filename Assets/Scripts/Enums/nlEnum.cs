@@ -54,6 +54,7 @@ namespace Enums
         public enum PoolObjectTypes
         {
             Cheese,
+            CheeseRed,
             Onion,
             Tomate
         }

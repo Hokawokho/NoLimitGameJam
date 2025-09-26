@@ -386,6 +386,10 @@ MonoBehaviour:
     spawnParent: {fileID: 2070773045}
     initialSpawnCount: 9
     poolObjectType: 0
+  - prefab: {fileID: 6726595457265301745, guid: 914178f63c132d54592af625569af120, type: 3}
+    spawnParent: {fileID: 2070773045}
+    initialSpawnCount: 9
+    poolObjectType: 0
 --- !u!4 &2070773045
 Transform:
   m_ObjectHideFlags: 0
