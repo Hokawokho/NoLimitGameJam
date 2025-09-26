@@ -56,7 +56,7 @@ public class Stacking : MonoBehaviour
         //animator.SetTrigger("stacking");
 
 
-        float number = Random.Range(-0.5f, 0.5f);
+        float number = Random.Range(minRandomValue, maxRandomValue);
 
         switch (h)
         {
