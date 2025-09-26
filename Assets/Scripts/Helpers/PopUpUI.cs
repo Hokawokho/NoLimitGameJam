@@ -50,33 +50,33 @@ namespace Helpers
 
         private void OnCLickContinueButton()
         {
-            LeanAnimator.ButtonOnClick(continueButton , () =>
-            {
-                yesCallBack?.Invoke();
-            }, true);
+            //LeanAnimator.ButtonOnClick(continueButton , () =>
+            //{
+            //    yesCallBack?.Invoke();
+            //}, true);
         }
 
         private void OnClickConfirmButton()
         {
-            LeanAnimator.ButtonOnClick(confirmButton , () =>
-            {
-                yesCallBack?.Invoke();
-            }, true);
+            //LeanAnimator.ButtonOnClick(confirmButton , () =>
+            //{
+            //    yesCallBack?.Invoke();
+            //}, true);
         }
         private void OnClickNoButton()
         {
-            LeanAnimator.ButtonOnClick(noButton , () =>
-            {
-                noCallBack?.Invoke();
-            }, true);
+            //LeanAnimator.ButtonOnClick(noButton , () =>
+            //{
+            //    noCallBack?.Invoke();
+            //}, true);
         }
 
         private void OnClickYesButton()
         {
-            LeanAnimator.ButtonOnClick(yesButton , () =>
-            {
-                yesCallBack?.Invoke();
-            } , true);
+            //LeanAnimator.ButtonOnClick(yesButton , () =>
+            //{
+            //    yesCallBack?.Invoke();
+            //} , true);
         }
 
         public void ShowPop(string header , string message , nlEnum.PopUpType popUpType , YesCallBack yesCallBack , NoCallBack noCallBack )
@@ -87,22 +87,22 @@ namespace Helpers
             this.yesCallBack = yesCallBack;
             this.noCallBack = noCallBack;
             gameObject.SetActive(true);
-            LeanAnimator.Fade(transform, 1, LeanTweenType.easeInOutSine, 0.5f , 0 , true);
-            LeanAnimator.Move(board , endPos , LeanTweenType.easeOutElastic ,1f , 0 , true);
+            //LeanAnimator.Fade(transform, 1, LeanTweenType.easeInOutSine, 0.5f , 0 , true);
+            //LeanAnimator.Move(board , endPos , LeanTweenType.easeOutElastic ,1f , 0 , true);
         }
 
         public void ClosePopUp()
         {
-            LeanAnimator.Move(board , startPos , LeanTweenType.easeOutBack, 0.6f,0,true , () =>
-            {
-                header.text = "";
-                message.text = "";
-                yesCallBack = null;
-                noCallBack = null;
-                gameObject.SetActive(false);
-                DisableALlButtons();
-            });
-            LeanAnimator.Fade(transform, 0, LeanTweenType.easeInOutSine, 0.5f , 0 , true);
+            //LeanAnimator.Move(board , startPos , LeanTweenType.easeOutBack, 0.6f,0,true , () =>
+            //{
+            //    header.text = "";
+            //    message.text = "";
+            //    yesCallBack = null;
+            //    noCallBack = null;
+            //    gameObject.SetActive(false);
+            //    DisableALlButtons();
+            //});
+            //LeanAnimator.Fade(transform, 0, LeanTweenType.easeInOutSine, 0.5f , 0 , true);
         }
 
         void HandleButtonsAndCallbacks(nlEnum.PopUpType popUpType , YesCallBack yesCallBack , NoCallBack noCallBack)

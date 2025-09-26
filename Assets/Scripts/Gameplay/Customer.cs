@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Customer : MonoBehaviour, IPoolableObjects
 {
-    [SerializeField] float foddQualityExpectation;
+    [SerializeField] int foddQualityExpectation;
     [SerializeField] SpriteRenderer spriteRenderer;
 
     private void OnValidate()
@@ -11,10 +11,13 @@ public class Customer : MonoBehaviour, IPoolableObjects
         if(spriteRenderer == null) spriteRenderer = GetComponent<SpriteRenderer>(); 
     }
 
-    public void SetCustomerImage(Sprite sprite)
+    public void Init(Sprite sprite, int foodQuality)
     {
         spriteRenderer.sprite = sprite;
+        foddQualityExpectation = foodQuality;
     }
+
+
 
     public void Init(ObjectPooling pool)
     {
