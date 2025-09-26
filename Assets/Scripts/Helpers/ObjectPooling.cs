@@ -25,7 +25,9 @@ namespace Gameplay
     
         [SerializeField] private List<PoolObjectData> poolObjectDataList;
 
+
         private List<IngiObj> ingredientListPool = new List<IngiObj>();
+        private List<AudioObject> audioObjectPool = new List<AudioObject>();
        
 
         private void Start()
@@ -59,6 +61,10 @@ namespace Gameplay
                     var enemy = (IngiObj)poolObject;
                     ingredientListPool.Add(enemy);
                     break;
+                case nlEnum.PoolObjectTypes.AudioObject:
+                    var audio = (AudioObject)poolObject;
+                    audioObjectPool.Add(audio);
+                    break;
             }
         }
 
@@ -91,26 +97,28 @@ namespace Gameplay
                     ingredientListPool.Remove(onion);
                     onion.SetParent(null);
                     return onion;
+
+                    case nlEnum.PoolObjectTypes.AudioObject:
+                    if (audioObjectPool.Count < 2)
+                    //DO SEPARATE LIST FOR EACH INGRIDIENT
+                    {
+                        var poolObjectData = GetPoolProjectData(nlEnum.PoolObjectTypes.AudioObject);
+                        Spawn(poolObjectData.prefab, 10, poolObjectData.poolObjectType, poolObjectData.spawnParent);
+                    }
+                    var audio = audioObjectPool[0];
+                    audioObjectPool.Remove(audio);
+                    audio.SetParent(null);
+                    return audio;
                 default:
                     return null;
             }
 
         }
 
-        private IPoolableObjects GetParticleObject(List<InGameParticles> poolList , nlEnum.PoolObjectTypes particlePoolType)
+        public AudioObject GetAudioObject()
         {
-            if (poolList.Count < 2)
-            {
-                var poolObjectData = GetPoolProjectData(particlePoolType);
-                Spawn(poolObjectData.prefab, 10, poolObjectData.poolObjectType, poolObjectData.spawnParent);
-            }
-
-            var bulletHit = poolList[0];
-            poolList.Remove(bulletHit);
-            bulletHit.transform.parent = null;
-            return bulletHit;
+            return (AudioObject)GetObjectFromPool(nlEnum.PoolObjectTypes.AudioObject);
         }
-
 
 
         public IngiObj GetIngiPrefab()
@@ -127,6 +135,12 @@ namespace Gameplay
                     var enemy = (IngiObj)poolable;
                     ResetObjects(enemy.gameObject , nlEnum.PoolObjectTypes.Cheese);
                     ingredientListPool.Add(enemy);
+                    break;
+
+                case nlEnum.PoolObjectTypes.AudioObject:
+                    var audio = (AudioObject)poolable;
+                    ResetObjects(audio.gameObject, nlEnum.PoolObjectTypes.Cheese);
+                    audioObjectPool.Add(audio);
                     break;
             }
         }

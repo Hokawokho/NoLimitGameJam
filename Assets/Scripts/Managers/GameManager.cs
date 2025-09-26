@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Gameplay;
+using Managers;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -11,7 +12,12 @@ public class GameManager : MonoBehaviour
     //    ////var o = ObjectPooling.Instance.GetIngiPrefab();
     //    ////o.gameObject.SetActive(true);   
     //}
+    [SerializeField] SoundsHolder sounds;
 
+    private void Awake()
+    {
+        SoundsManager.Instance.Init(sounds);
+    }
     void Start()
     {
         //await Task.Delay(500);

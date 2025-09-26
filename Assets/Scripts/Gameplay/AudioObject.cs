@@ -1,3 +1,4 @@
+using System;
 using Gameplay;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -9,6 +10,7 @@ public class AudioObject : MonoBehaviour, IPoolableObjects
     public void BackToPool()
     {
         gameObject.SetActive(false);
+        audioSource.clip = null;
 
     }
 
@@ -28,5 +30,10 @@ public class AudioObject : MonoBehaviour, IPoolableObjects
     {
         audioSource.clip = audioClip;
         audioSource.Play();
+    }
+
+    internal void SetParent(Transform value)
+    {
+        transform.SetParent(value);
     }
 }
