@@ -25,8 +25,16 @@ public class RubbishSlot : MonoBehaviour
     {
         if (rubbish.activeInHierarchy)
         {
+<<<<<<< Updated upstream
             SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.TrashClick);
+=======
+            SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx , nlEnum.GameSounds.TrashClickSuccess);
+>>>>>>> Stashed changes
             StartCoroutine(SendRubbish());
+        }
+        else
+        {
+            SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx , nlEnum.GameSounds.TrashClickFail);
         }
     }
 

@@ -13,5 +13,12 @@ MonoBehaviour:
   m_Name: GameAudios
   m_EditorClassIdentifier: 
   soundDatas:
+<<<<<<< Updated upstream
   - AudioClip: {fileID: 8300000, guid: 13e6565bd35389c41a8f658c033a2b14, type: 3}
     gameSounds: 0
+=======
+  - AudioClip: {fileID: 8300000, guid: 64d989061ba9275468bee09ab544e251, type: 3}
+    gameSounds: 0
+  - AudioClip: {fileID: 8300000, guid: c39d47d64a02f884caf0f6221ae19650, type: 3}
+    gameSounds: 1
+>>>>>>> Stashed changes
