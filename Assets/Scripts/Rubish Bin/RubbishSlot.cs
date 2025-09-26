@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using Enums;
 using Managers;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class RubbishSlot : MonoBehaviour
 {
@@ -11,11 +13,12 @@ public class RubbishSlot : MonoBehaviour
     [SerializeField] private GameObject rubbish;
     [SerializeField] private SlotFill fill;
     [SerializeField] private ScoreManager scoreManager;
+    [SerializeField] private Stacking stacking;
     
     [Header("Settings")]
 
     [SerializeField] private float timer;
-
+    
     private void Start()
     {
         GetNewTrash();
@@ -38,6 +41,8 @@ public class RubbishSlot : MonoBehaviour
     {
         rubbish.SetActive(false);
         fill.gameObject.SetActive(true);
+        
+        stacking.ShowFood(nlEnum.PoolObjectTypes.Cheese);
         
         scoreManager.AddMealScore((int)Random.Range(-10, 10));
         
