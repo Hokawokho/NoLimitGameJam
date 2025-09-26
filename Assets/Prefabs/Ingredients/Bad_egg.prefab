@@ -119,6 +119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7115262770204397379}
+  - component: {fileID: 2687950095394470659}
   m_Layer: 0
   m_Name: Bad_egg
   m_TagString: Untagged
@@ -142,3 +143,18 @@ Transform:
   - {fileID: 3134059900545780388}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2687950095394470659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6704384415657495706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35258577de61ad04d833b3d24e4af67f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
+  height: 1
+  ingiName: 3

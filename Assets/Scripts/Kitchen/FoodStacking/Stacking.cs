@@ -17,9 +17,9 @@ public class Stacking : MonoBehaviour
 
     private int layerCounter = 0;
 
-    private float minRandomValue = -0.5f;
+    [SerializeField] float minRandomValue;
 
-    private float maxRandomValue = +0.5f;
+    [SerializeField] float maxRandomValue;
 
     private float initialX;
 
@@ -40,7 +40,7 @@ public class Stacking : MonoBehaviour
 
         if (Keyboard.current.aKey.wasPressedThisFrame)
         {
-            ShowFood(nlEnum.PoolObjectTypes.Onion);
+            ShowFood(nlEnum.PoolObjectTypes.Boot);
         }
     }
 
@@ -63,13 +63,13 @@ public class Stacking : MonoBehaviour
         //animator.SetTrigger("stacking");
 
 
-        float number = Random.Range(minRandomValue, maxRandomValue);
+        //float number = Random.Range(minRandomValue, maxRandomValue);
 
         switch (h)
         {
             case (1):
 
-                transform.position = new Vector3(initialX + number,
+                transform.position = new Vector3(initialX,
                                                  transform.position.y + increment1,
                                                  transform.position.z 
                                                  );
@@ -80,7 +80,7 @@ public class Stacking : MonoBehaviour
             
             case (2):
 
-                transform.position = new Vector3(transform.position.x,
+                transform.position = new Vector3(initialX,
                                                  transform.position.y + increment2,
                                                  transform.position.z
                                                  );
@@ -91,7 +91,7 @@ public class Stacking : MonoBehaviour
             
             case (3):
 
-                transform.position = new Vector3(transform.position.x,
+                transform.position = new Vector3(initialX,
                                                  transform.position.y + increment3,
                                                  transform.position.z
                                                  );

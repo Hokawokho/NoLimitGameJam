@@ -241,6 +241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9111122512638629479}
   - component: {fileID: 8157402867620149472}
+  - component: {fileID: 3463367795870161405}
   m_Layer: 0
   m_Name: BrocoParent
   m_TagString: Untagged
@@ -286,6 +287,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3463367795870161405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6234148015885346777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35258577de61ad04d833b3d24e4af67f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 0
+  height: 1
+  ingiName: 7
 --- !u!1 &8756382201200316955
 GameObject:
   m_ObjectHideFlags: 0
