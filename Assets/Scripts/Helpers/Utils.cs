@@ -54,14 +54,14 @@ namespace Helpers
 
         public static void QuitGame()
         {
-            PopUp.ShowPopUp("Attention" , "Do you really want to quit game" , nlEnum.PopUpType.YES_NO , () =>
-            {
-#if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-#else           
-            Application.Quit();
-#endif
-            }, PopUp.ClosePopUp);
+//            PopUp.ShowPopUp("Attention" , "Do you really want to quit game" , nlEnum.PopUpType.YES_NO , () =>
+//            {
+//#if UNITY_EDITOR
+//                UnityEditor.EditorApplication.isPlaying = false;
+//#else           
+//            Application.Quit();
+//#endif
+//            }, PopUp.ClosePopUp);
 
 
         }
