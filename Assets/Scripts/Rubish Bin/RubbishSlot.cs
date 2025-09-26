@@ -18,6 +18,8 @@ public class RubbishSlot : MonoBehaviour
     [Header("Settings")]
 
     [SerializeField] private float timer;
+    [SerializeField] private int foodvalue;
+    [SerializeField] private nlEnum.PoolObjectTypes inrgidientType;
     
     private void Start()
     {
@@ -42,9 +44,8 @@ public class RubbishSlot : MonoBehaviour
         rubbish.SetActive(false);
         fill.gameObject.SetActive(true);
         
-        stacking.ShowFood(nlEnum.PoolObjectTypes.Cheese);
-        
-        scoreManager.AddMealScore((int)Random.Range(-10, 10));
+        stacking.ShowFood(inrgidientType);
+        scoreManager.AddMealScore(foodvalue);
         
         yield return new WaitForSeconds(timer);
         GetNewTrash();
@@ -52,10 +53,11 @@ public class RubbishSlot : MonoBehaviour
 
     private void GetNewTrash()
     {
-        Color randomColor = new Color(Random.value, Random.value, Random.value);
-
-        rubbish.GetComponent<Image>().color = randomColor;
-
+        IngridientData ingridientData = RubbishManager.Instance.GetIngredient();
+        
+        foodvalue = ingridientData.value;
+        inrgidientType = ingridientData.inrgidientType;
+        
         rubbish.SetActive(true);
     }
 

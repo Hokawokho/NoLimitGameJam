@@ -6,8 +6,7 @@ using UnityEngine;
 [Serializable]
 public class IngridientData
 {
-    public float value;
-    public Texture2D texture;
+    public int value;
     public nlEnum.PoolObjectTypes inrgidientType;
 }
 
