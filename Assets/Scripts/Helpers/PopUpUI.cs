@@ -110,28 +110,28 @@ namespace Helpers
             DisableALlButtons();
             switch (popUpType)
             {
-                case nlEnum.PopUpType.YES_NO:
-                    this.yesCallBack = yesCallBack;
-                    this.noCallBack = noCallBack;
-                    yesButton.gameObject.SetActive(true);
-                    noButton.gameObject.SetActive(true);
-                    break;
-                case nlEnum.PopUpType.ONLY_YES:
-                    this.yesCallBack = yesCallBack;
-                    yesButton.gameObject.SetActive(true);
-                    break;
-                case nlEnum.PopUpType.ONLY_NO:
-                    this.noCallBack = noCallBack;
-                    noButton.gameObject.SetActive(true);
-                    break;
-                case nlEnum.PopUpType.CONFIRM:
-                    this.yesCallBack = yesCallBack;
-                    confirmButton.gameObject.SetActive(true);
-                    break;
-                case nlEnum.PopUpType.CONTINUE:
-                    this.yesCallBack = yesCallBack;
-                    continueButton.gameObject.SetActive(true);
-                    break;
+                //case nlEnum.PopUpType.YES_NO:
+                //    this.yesCallBack = yesCallBack;
+                //    this.noCallBack = noCallBack;
+                //    yesButton.gameObject.SetActive(true);
+                //    noButton.gameObject.SetActive(true);
+                //    break;
+                //case nlEnum.PopUpType.ONLY_YES:
+                //    this.yesCallBack = yesCallBack;
+                //    yesButton.gameObject.SetActive(true);
+                //    break;
+                //case nlEnum.PopUpType.ONLY_NO:
+                //    this.noCallBack = noCallBack;
+                //    noButton.gameObject.SetActive(true);
+                //    break;
+                //case nlEnum.PopUpType.CONFIRM:
+                //    this.yesCallBack = yesCallBack;
+                //    confirmButton.gameObject.SetActive(true);
+                //    break;
+                //case nlEnum.PopUpType.CONTINUE:
+                //    this.yesCallBack = yesCallBack;
+                //    continueButton.gameObject.SetActive(true);
+                //    break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(popUpType), popUpType, null);
             }

@@ -1,4 +1,5 @@
 using Enums;
+using Gameplay;
 using UnityEngine;
 
 namespace Managers
@@ -14,8 +15,8 @@ namespace Managers
 
         public void PlaySound(nlEnum.GameSoundTypes soundType, nlEnum.GameSounds gameSounds)
         {
-            var s = new AudioObject(); // todo : get from pool
-            s.PlaySound(soundsHolderSo.GetAudioClip(gameSounds));
+            var a = ObjectPooling.Instance.GetAudioObject();
+            a.PlaySound(soundsHolderSo.GetAudioClip(gameSounds));
         }
     }
 }
