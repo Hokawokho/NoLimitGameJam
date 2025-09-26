@@ -1,4 +1,6 @@
 using System.Collections;
+using Enums;
+using Managers;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +10,8 @@ public class RubbishSlot : MonoBehaviour
 
     [SerializeField] private GameObject rubbish;
     [SerializeField] private SlotFill fill;
-
+    [SerializeField] private ScoreManager scoreManager;
+    
     [Header("Settings")]
 
     [SerializeField] private float timer;
@@ -22,6 +25,7 @@ public class RubbishSlot : MonoBehaviour
     {
         if (rubbish.activeInHierarchy)
         {
+            SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.TrashClick);
             StartCoroutine(SendRubbish());
         }
     }
@@ -30,6 +34,9 @@ public class RubbishSlot : MonoBehaviour
     {
         rubbish.SetActive(false);
         fill.gameObject.SetActive(true);
+        
+        scoreManager.AddMealScore((int)Random.Range(-10, 10));
+        
         yield return new WaitForSeconds(timer);
         GetNewTrash();
     }

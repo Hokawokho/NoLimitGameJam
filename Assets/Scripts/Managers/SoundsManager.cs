@@ -12,7 +12,7 @@ namespace Managers
             soundsHolderSo = soundsHolder; 
         }
 
-        public void PlaySound(nlEnum.SoundType soundType, nlEnum.GameSounds gameSounds)
+        public void PlaySound(nlEnum.GameSoundTypes soundType, nlEnum.GameSounds gameSounds)
         {
             var s = new AudioObject(); // todo : get from pool
             s.PlaySound(soundsHolderSo.GetAudioClip(gameSounds));
