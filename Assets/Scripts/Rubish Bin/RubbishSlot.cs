@@ -8,6 +8,10 @@ using Random = UnityEngine.Random;
 
 public class RubbishSlot : MonoBehaviour
 {
+    [Header("Icons")]
+    
+    [SerializeField] private Sprite[] icons;
+    
     [Header("References")]
 
     [SerializeField] private GameObject rubbish;
@@ -58,7 +62,21 @@ public class RubbishSlot : MonoBehaviour
         foodvalue = ingridientData.value;
         inrgidientType = ingridientData.inrgidientType;
         
+        SetImage(inrgidientType);
         rubbish.SetActive(true);
     }
 
+    private void SetImage(nlEnum.PoolObjectTypes food)
+    {
+        switch (food)
+        {
+            case nlEnum.PoolObjectTypes.Cheese:
+                rubbish.GetComponent<Image>().sprite = icons[0];
+                break;
+            
+            case nlEnum.PoolObjectTypes.Onion:
+                rubbish.GetComponent<Image>().sprite = icons[1];
+                break;
+        }
+    }
 }

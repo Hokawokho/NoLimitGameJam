@@ -7,8 +7,7 @@ public class ScoreManager : MonoBehaviour
 {
     [Header("References")]
     
-    [SerializeField] private Slider foodQualityBar;
-    [SerializeField] private Image foodQualityBarFill;
+    [SerializeField] private Image foodQualityBar;
     [SerializeField] private RectTransform expectedScoreLabel;
     
     [Header("Settings")]
@@ -30,9 +29,9 @@ public class ScoreManager : MonoBehaviour
 
     private void Update()
     {
-        foodQualityBar.value = Mathf.Lerp(foodQualityBar.value, mealScore, foodQualityBarSpeed * Time.deltaTime);
+        foodQualityBar.fillAmount = Mathf.Lerp(foodQualityBar.fillAmount, mealScore / 100f, foodQualityBarSpeed * Time.deltaTime);
 
-        foodQualityBarFill.color = mealScore < expectedScore ? badColor : goodColor;
+        foodQualityBar.color = mealScore < expectedScore ? badColor : goodColor;
     }
 
     public void AddMealScore(int newScore)
