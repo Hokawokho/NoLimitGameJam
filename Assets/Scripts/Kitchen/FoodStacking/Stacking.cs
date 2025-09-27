@@ -23,11 +23,18 @@ public class Stacking : MonoBehaviour
 
     private float initialX;
 
+    private nlEnum.PoolObjectTypes[] ingredients;
+    private int currentIndex = 0;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Start()
     {
         float initialX = transform.position.x;
+
+        ingredients = (nlEnum.PoolObjectTypes[])System.Enum.GetValues(typeof(nlEnum.PoolObjectTypes));
+        
+        Debug.Log("Ingrediente actual: " + ingredients[currentIndex]);
     }
 
     // Update is called once per frame
@@ -35,19 +42,36 @@ public class Stacking : MonoBehaviour
     {
         if (Keyboard.current.sKey.wasPressedThisFrame)
         {
-            ShowFood(nlEnum.PoolObjectTypes.Cheese);
+            ShowFood(ingredients[currentIndex]);
         }
 
         if (Keyboard.current.aKey.wasPressedThisFrame)
         {
             ShowFood(nlEnum.PoolObjectTypes.Boot);
         }
+
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        {
+            CycleIngredient();
+        }
+    }
+
+    private void CycleIngredient()
+    {
+        currentIndex++;
+
+        if (currentIndex >= ingredients.Length)
+        {
+            currentIndex = 0;
+        }
+        Debug.Log("Ingrediente actual: " + ingredients[currentIndex]);
+         
     }
 
     public void ShowFood(nlEnum.PoolObjectTypes ingiFromTrash)
     {
         var o = ObjectPooling.Instance.GetIngiPrefab(ingiFromTrash);
-        o.gameObject.SetActive(true); 
+        o.gameObject.SetActive(true);
 
         o.transform.position = transform.position;
         Animator animator = o.GetComponentInChildren<Animator>();
@@ -58,8 +82,8 @@ public class Stacking : MonoBehaviour
         int h = ingredientStats.height;
 
         SpriteRenderer ingredientSprite = o.GetComponentInChildren<SpriteRenderer>();
-        ingredientSprite.sortingOrder =layerCounter;
-        
+        ingredientSprite.sortingOrder = layerCounter;
+
         //animator.SetTrigger("stacking");
 
 
@@ -71,13 +95,13 @@ public class Stacking : MonoBehaviour
 
                 transform.position = new Vector3(initialX,
                                                  transform.position.y + increment1,
-                                                 transform.position.z 
+                                                 transform.position.z
                                                  );
                 layerCounter++;
 
                 break;
-            
-            
+
+
             case (2):
 
                 transform.position = new Vector3(initialX,
@@ -87,8 +111,8 @@ public class Stacking : MonoBehaviour
                 layerCounter++;
 
                 break;
-            
-            
+
+
             case (3):
 
                 transform.position = new Vector3(initialX,

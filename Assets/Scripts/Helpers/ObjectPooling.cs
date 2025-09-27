@@ -209,6 +209,19 @@ namespace Gameplay
                     ingredientListPoolBadFish.Remove(bFish);
                     bFish.SetParent(null);
                     return bFish;
+                
+                case nlEnum.PoolObjectTypes.BadSteak:
+                    if (ingredientListPoolBadFish.Count < 2)
+                    //DO SEPARATE LIST FOR EACH INGRIDIENT
+                    {
+                        var poolObjectData = GetPoolProjectData(nlEnum.PoolObjectTypes.BadSteak);
+                        Spawn(poolObjectData.prefab, 10, poolObjectData.poolObjectType, poolObjectData.spawnParent);
+                    }
+                    var bSteak = ingredientListPoolBadSteak[0];
+                    ingredientListPoolBadSteak.Remove(bSteak);
+                    bSteak.SetParent(null);
+                    return bSteak;
+                
 
                 case nlEnum.PoolObjectTypes.Beetroot:
                     if (ingredientListPoolBeetroot.Count < 2)
@@ -282,6 +295,68 @@ namespace Gameplay
                     spag.SetParent(null);
                     return spag;
 
+                
+                case nlEnum.PoolObjectTypes.Bun_bot:
+                    if (ingredientListPoolBunBot.Count < 2)
+                    //DO SEPARATE LIST FOR EACH INGRIDIENT
+                    {
+                        var poolObjectData = GetPoolProjectData(nlEnum.PoolObjectTypes.Bun_bot);
+                        Spawn(poolObjectData.prefab, 10, poolObjectData.poolObjectType, poolObjectData.spawnParent);
+                    }
+                    var bunBot = ingredientListPoolBunBot[0];
+                    ingredientListPoolBunBot.Remove(bunBot);
+                    bunBot.SetParent(null);
+                    return bunBot;
+                
+                case nlEnum.PoolObjectTypes.Patty:
+                    if (ingredientListPoolPatty.Count < 2)
+                    //DO SEPARATE LIST FOR EACH INGRIDIENT
+                    {
+                        var poolObjectData = GetPoolProjectData(nlEnum.PoolObjectTypes.Patty);
+                        Spawn(poolObjectData.prefab, 10, poolObjectData.poolObjectType, poolObjectData.spawnParent);
+                    }
+                    var patty = ingredientListPoolPatty[0];
+                    ingredientListPoolPatty.Remove(patty);
+                    patty.SetParent(null);
+                    return patty;
+                
+                case nlEnum.PoolObjectTypes.Bun_top:
+                    if (ingredientListPoolBunTop.Count < 2)
+                    //DO SEPARATE LIST FOR EACH INGRIDIENT
+                    {
+                        var poolObjectData = GetPoolProjectData(nlEnum.PoolObjectTypes.Bun_top);
+                        Spawn(poolObjectData.prefab, 10, poolObjectData.poolObjectType, poolObjectData.spawnParent);
+                    }
+                    var bunTop = ingredientListPoolBunTop[0];
+                    ingredientListPoolBunTop.Remove(bunTop);
+                    bunTop.SetParent(null);
+                    return bunTop;
+                
+                case nlEnum.PoolObjectTypes.Donut:
+                    if (ingredientListPoolDonut.Count < 2)
+                    //DO SEPARATE LIST FOR EACH INGRIDIENT
+                    {
+                        var poolObjectData = GetPoolProjectData(nlEnum.PoolObjectTypes.Donut);
+                        Spawn(poolObjectData.prefab, 10, poolObjectData.poolObjectType, poolObjectData.spawnParent);
+                    }
+                    var donut = ingredientListPoolDonut[0];
+                    ingredientListPoolDonut.Remove(donut);
+                    donut.SetParent(null);
+                    return donut;
+                
+                case nlEnum.PoolObjectTypes.Pizza:
+                    if (ingredientListPoolPizza.Count < 2)
+                    //DO SEPARATE LIST FOR EACH INGRIDIENT
+                    {
+                        var poolObjectData = GetPoolProjectData(nlEnum.PoolObjectTypes.Pizza);
+                        Spawn(poolObjectData.prefab, 10, poolObjectData.poolObjectType, poolObjectData.spawnParent);
+                    }
+                    var pizza = ingredientListPoolPizza[0];
+                    ingredientListPoolPizza.Remove(pizza);
+                    pizza.SetParent(null);
+                    return pizza;
+                                
+
                 case nlEnum.PoolObjectTypes.AudioObject:
                     if (audioObjectPool.Count < 2)
                     //DO SEPARATE LIST FOR EACH INGRIDIENT
@@ -336,6 +411,14 @@ namespace Gameplay
                     ResetObjects(bRoot.gameObject, nlEnum.PoolObjectTypes.Beetroot);
                     ingredientListPoolBeetroot.Add(bRoot);
                     break;
+                
+                case nlEnum.PoolObjectTypes.BadSteak:
+                    var bSteak = (IngiObj)poolable;
+                    ResetObjects(bSteak.gameObject, nlEnum.PoolObjectTypes.BadSteak);
+                    ingredientListPoolBadSteak.Add(bSteak);
+                    break;
+                
+
                 case nlEnum.PoolObjectTypes.Onion:
                     var onion = (IngiObj)poolable;
                     ResetObjects(onion.gameObject, nlEnum.PoolObjectTypes.Onion);
@@ -366,6 +449,36 @@ namespace Gameplay
                     var spag = (IngiObj)poolable;
                     ResetObjects(spag.gameObject, nlEnum.PoolObjectTypes.Spaghetti);
                     ingredientListPoolSpaghetti.Add(spag);
+                    break;
+
+                case nlEnum.PoolObjectTypes.Bun_bot:
+                    var bunBot = (IngiObj)poolable;
+                    ResetObjects(bunBot.gameObject, nlEnum.PoolObjectTypes.Bun_bot);
+                    ingredientListPoolBunBot.Add(bunBot);
+                    break;
+
+                case nlEnum.PoolObjectTypes.Patty:
+                    var patty = (IngiObj)poolable;
+                    ResetObjects(patty.gameObject, nlEnum.PoolObjectTypes.Patty);
+                    ingredientListPoolPatty.Add(patty);
+                    break;
+
+                case nlEnum.PoolObjectTypes.Bun_top:
+                    var bunTop = (IngiObj)poolable;
+                    ResetObjects(bunTop.gameObject, nlEnum.PoolObjectTypes.Bun_top);
+                    ingredientListPoolBunTop.Add(bunTop);
+                    break;
+
+                case nlEnum.PoolObjectTypes.Donut:
+                    var donut = (IngiObj)poolable;
+                    ResetObjects(donut.gameObject, nlEnum.PoolObjectTypes.Donut);
+                    ingredientListPoolDonut.Add(donut);
+                    break;
+                
+                case nlEnum.PoolObjectTypes.Pizza:
+                    var pizza = (IngiObj)poolable;
+                    ResetObjects(pizza.gameObject, nlEnum.PoolObjectTypes.Pizza);
+                    ingredientListPoolPizza.Add(pizza);
                     break;
 
                 case nlEnum.PoolObjectTypes.AudioObject:
