@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 308887326137571097}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.70236, y: 2.95424, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52,4 +52,60 @@ MonoBehaviour:
   - prefab: {fileID: 6726595457265301745, guid: 914178f63c132d54592af625569af120, type: 3}
     spawnParent: {fileID: 7537339249779612039}
     initialSpawnCount: 9
-    poolObjectType: 0
+    poolObjectType: 2
+  - prefab: {fileID: 6704384415657495706, guid: 8cc357ee0eea5764587e38fbf7217bde, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 3
+  - prefab: {fileID: 5905282656143237705, guid: d334e54e84afede40abbbfdf921237f0, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 4
+  - prefab: {fileID: 8025778001107749422, guid: f3548767a61174d49877bd0b9e5b9d86, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 5
+  - prefab: {fileID: 3617124003432417927, guid: fafaa60f8d6d1bf4484ea03934c8ddf2, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 6
+  - prefab: {fileID: 7353836924286901977, guid: 91e7a4593aa24d743b12baa34fc24dc6, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 8
+  - prefab: {fileID: 4032723589853170482, guid: ab35d6186b4f78446a02e27652dc2523, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 9
+  - prefab: {fileID: 6234148015885346777, guid: ee48c3ead72358b488887d14fd34a4b0, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 7
+  - prefab: {fileID: 5471203446565432886, guid: 548d49e2db2515e4487c548186644592, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 10
+  - prefab: {fileID: 7746526091984251461, guid: 54a12e30e61ec6842a3f95b3e5ae5353, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 11
+  - prefab: {fileID: 6440967250673729259, guid: 9a307b853524f7b4e9b054a2bba21731, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 12
+  - prefab: {fileID: 2989575867997795951, guid: 919e2813cf29c324487512af81375ae0, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 13
+  - prefab: {fileID: 8048734899298546006, guid: d308b19c7807e534fa89584de961a2ff, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 14
+  - prefab: {fileID: 7173811874963616113, guid: 1d17c432cfbc31746925bed626ff0104, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 15
+  - prefab: {fileID: 8953301821486787951, guid: d7b626e42e32ae1469e89b58bbf036d2, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 16
