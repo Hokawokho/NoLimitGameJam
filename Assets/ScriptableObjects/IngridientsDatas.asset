@@ -14,6 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data:
   - value: 10
-    inrgidientType: 0
-  - value: -5
-    inrgidientType: 2
+    inrgidientType: 13
