@@ -20,7 +20,21 @@ public class CustomersManager : GenericSingleton<CustomersManager>
     {
         await Task.Delay(100);
         SpawnCustomer();
-        await Task.Delay(100);
+        
+    }
+    private void OnEnable()
+    {
+        CookTimerHandler.OnTimeDone += OnTimerDone;
+    }
+
+    private void OnDisable()
+    {
+
+        CookTimerHandler.OnTimeDone -= OnTimerDone;
+    }
+
+    private void OnTimerDone()
+    {
         SwitchCustomer();
     }
 

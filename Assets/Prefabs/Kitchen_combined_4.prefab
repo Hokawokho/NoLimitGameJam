@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 4175975500229353801}
   - component: {fileID: 6995733220667741829}
   m_Layer: 0
-  m_Name: Elroy Flatmate
+  m_Name: Customer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -450,7 +450,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3361891171026652563}
-  - component: {fileID: 7426649557464106530}
   m_Layer: 0
   m_Name: CustomerSpawnParent
   m_TagString: Untagged
@@ -474,16 +473,3 @@ Transform:
   - {fileID: 1890481425079045590}
   m_Father: {fileID: 5873830718070921712}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7426649557464106530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7327770894751812100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01112070f90a346f1a342190062fc57c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customer: {fileID: 6995733220667741829}

@@ -13,7 +13,7 @@ public class CookTimerHandler : MonoBehaviour
     bool canRunTimer;
 
     public static event Action OnTimeDone;
-    public static event Action<float> UpdateTime;
+    public static event Action<float,float> UpdateTime;
 
     private void Awake()
     {
@@ -33,7 +33,7 @@ public class CookTimerHandler : MonoBehaviour
 
     private void NewCustomerArrived(int dummy)
     {
-        UpdateMaxTime();
+        //UpdateMaxTime();
         SetCurrentTime();
         StartCoroutine(StartTimer());
     }
@@ -53,7 +53,7 @@ public class CookTimerHandler : MonoBehaviour
         while (currentTime > 0)
         {
             currentTime--;
-            UpdateTime?.Invoke(currentTime);
+            UpdateTime?.Invoke(currentTime,currentMaxTime);
             yield return new WaitForSeconds(1);
         }
         OnTimeDone?.Invoke();
