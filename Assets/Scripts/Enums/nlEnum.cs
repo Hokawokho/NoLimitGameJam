@@ -63,6 +63,11 @@ namespace Enums
             Eyeball,
             Rat,
             Spaghetti,
+            Bun_bot,
+            Patty,
+            Bun_top,
+            Donut,
+            Pizza,
             AudioObject
         }
 

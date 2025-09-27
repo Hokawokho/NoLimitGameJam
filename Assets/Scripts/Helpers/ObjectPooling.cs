@@ -37,6 +37,11 @@ namespace Gameplay
         private List<IngiObj> ingredientListPoolSpaghetti = new List<IngiObj>();
         private List<IngiObj> ingredientListPoolBoot = new List<IngiObj>();
         private List<IngiObj> ingredientListPoolBroccoli = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolBunBot = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolBunTop = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolPatty = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolDonut = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolPizza = new List<IngiObj>();
         private List<AudioObject> audioObjectPool = new List<AudioObject>();
        
 
@@ -115,6 +120,31 @@ namespace Gameplay
                 case nlEnum.PoolObjectTypes.Spaghetti:
                     var spaghetti = (IngiObj)poolObject;
                     ingredientListPoolSpaghetti.Add(spaghetti);
+                    break; 
+                
+                case nlEnum.PoolObjectTypes.Bun_bot:
+                    var bunBot = (IngiObj)poolObject;
+                    ingredientListPoolBunBot.Add(bunBot);
+                    break;
+                
+                case nlEnum.PoolObjectTypes.Bun_top:
+                    var bunTop = (IngiObj)poolObject;
+                    ingredientListPoolBunTop.Add(bunTop);
+                    break;
+                
+                case nlEnum.PoolObjectTypes.Patty:
+                    var patty = (IngiObj)poolObject;
+                    ingredientListPoolPatty.Add(patty);
+                    break;
+                
+                case nlEnum.PoolObjectTypes.Donut:
+                    var donut = (IngiObj)poolObject;
+                    ingredientListPoolDonut.Add(donut);
+                    break;
+                
+                case nlEnum.PoolObjectTypes.Pizza:
+                    var pizza = (IngiObj)poolObject;
+                    ingredientListPoolPizza.Add(pizza);
                     break;
 
                     
