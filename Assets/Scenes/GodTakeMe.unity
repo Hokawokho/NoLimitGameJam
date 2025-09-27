@@ -296,6 +296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 198642183}
   - component: {fileID: 198642184}
+  - component: {fileID: 198642185}
   m_Layer: 0
   m_Name: Kitchen Lights
   m_TagString: Untagged
@@ -311,13 +312,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 198642182}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7403011, y: -0.22101775, z: 0.06472292, w: 0.6315984}
+  m_LocalRotation: {x: 0.9423947, y: -0.18002509, z: -0.14362772, w: -0.24259932}
   m_LocalPosition: {x: 17.56, y: 12.88, z: -79.63}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1615964998}
-  m_LocalEulerAnglesHint: {x: 74.527, y: 223.416, z: 246.94699}
+  m_LocalEulerAnglesHint: {x: -30.595, y: 192.299, z: 198.254}
 --- !u!108 &198642184
 Light:
   m_ObjectHideFlags: 0
@@ -383,6 +384,29 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &198642185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198642182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1 &203844586
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,6 +625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 420613501}
   - component: {fileID: 420613502}
+  - component: {fileID: 420613503}
   m_Layer: 0
   m_Name: Kitchen Lights
   m_TagString: Untagged
@@ -688,6 +713,29 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &420613503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420613500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
 --- !u!1001 &605064567
 PrefabInstance:
   m_ObjectHideFlags: 0
