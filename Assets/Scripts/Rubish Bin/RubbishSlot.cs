@@ -18,6 +18,7 @@ public class RubbishSlot : MonoBehaviour
     [SerializeField] private SlotFill fill;
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private Stacking stacking;
+    [SerializeField] private Animator rubbishBinAnimator;
     
     [Header("Settings")]
 
@@ -35,6 +36,7 @@ public class RubbishSlot : MonoBehaviour
         if (rubbish.activeInHierarchy)
         {
             //SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.TrashClickSuccess);
+            rubbishBinAnimator.Play("binMovement", 0,0f);
             StartCoroutine(SendRubbish());
         }
         else
@@ -70,11 +72,11 @@ public class RubbishSlot : MonoBehaviour
     {
         switch (food)
         {
-            case nlEnum.PoolObjectTypes.Cheese:
+            case nlEnum.PoolObjectTypes.Patty:
                 rubbish.GetComponent<Image>().sprite = icons[0];
                 break;
             
-            case nlEnum.PoolObjectTypes.Onion:
+            case nlEnum.PoolObjectTypes.Cheese:
                 rubbish.GetComponent<Image>().sprite = icons[1];
                 break;
         }
