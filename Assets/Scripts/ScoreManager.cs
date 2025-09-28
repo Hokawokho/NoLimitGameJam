@@ -19,10 +19,10 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private int mealScore;
     [SerializeField] private int expectedScore;
     [SerializeField] private int foodQualityBarSpeed;
-    
+    [SerializeField] private int MAXSCORE;
     private const float MIN_POSITION = -196.38f;
     private const float MAX_POSITION = 196.38f;
-
+    
     private void OnEnable()
     {
         RatingsManager.GetFoodQuality += RatingsManagerOnGetFoodQuality;
@@ -45,7 +45,7 @@ public class ScoreManager : MonoBehaviour
 
     private void Update()
     {
-        foodQualityBar.fillAmount = Mathf.Lerp(foodQualityBar.fillAmount, mealScore / 100f, foodQualityBarSpeed * Time.deltaTime);
+        foodQualityBar.fillAmount = Mathf.Lerp(foodQualityBar.fillAmount, mealScore / (float)MAXSCORE, foodQualityBarSpeed * Time.deltaTime);
 
         foodQualityBar.color = mealScore < expectedScore ? badColor : goodColor;
     }
@@ -62,7 +62,7 @@ public class ScoreManager : MonoBehaviour
     
     private void UpdateExpectedScoreLabelPosition()
     {
-        float normalizedScore = expectedScore / 100f; // Convert to 0-1 range
+        float normalizedScore = expectedScore / (float)MAXSCORE; // Convert to 0-1 range
         float targetPosition = Mathf.Lerp(MIN_POSITION, MAX_POSITION, normalizedScore);
         
         // Update the X position of the label
@@ -98,5 +98,9 @@ public class ScoreManager : MonoBehaviour
     private void BadMeal()
     {
         // Lose State
+    }
+    public int GetMaxScore()
+    {
+        return MAXSCORE;
     }
 }

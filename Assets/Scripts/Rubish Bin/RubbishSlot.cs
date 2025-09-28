@@ -26,6 +26,8 @@ public class RubbishSlot : MonoBehaviour
     [SerializeField] private float timer;
     [SerializeField] private int foodvalue;
     [SerializeField] private nlEnum.PoolObjectTypes inrgidientType;
+    [SerializeField] private float initialStackingPitch;
+    [SerializeField] private float maxPitch;
     
     private async void Start()
     {
@@ -37,13 +39,21 @@ public class RubbishSlot : MonoBehaviour
     {
         if (rubbish.activeInHierarchy)
         {
-            //SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.TrashClickSuccess);
+            float  pitch = Random.Range(0.9f, 1.1f);
+            initialStackingPitch += 0.05f;
+            if (initialStackingPitch > maxPitch)
+            {
+                initialStackingPitch = maxPitch;
+            }
+            
+            //SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.TrashClickSuccess, pitch);
+            SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.IngiStack, initialStackingPitch);
             rubbishBinAnimator.Play("binMovement", 0,0f);
             StartCoroutine(SendRubbish());
         }
         else
         {
-            //SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.TrashClickFail);
+            SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.TrashClickFail);
         }
     }
 

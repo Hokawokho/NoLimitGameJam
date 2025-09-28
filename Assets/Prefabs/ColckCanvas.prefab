@@ -235,7 +235,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &7209402295001583709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,3 +303,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circularFill: {fileID: 4184638465621390345}
+  clockHand: {fileID: 0}
