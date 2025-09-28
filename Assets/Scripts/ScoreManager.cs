@@ -1,4 +1,5 @@
 using System;
+using Gameplay;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,6 +22,21 @@ public class ScoreManager : MonoBehaviour
     
     private const float MIN_POSITION = -196.38f;
     private const float MAX_POSITION = 196.38f;
+
+    private void OnEnable()
+    {
+        RatingsManager.GetFoodQuality += RatingsManagerOnGetFoodQuality;
+    }
+
+    private void OnDisable()
+    {
+        RatingsManager.GetFoodQuality -= RatingsManagerOnGetFoodQuality;
+    }
+
+    private (int, int) RatingsManagerOnGetFoodQuality()
+    {
+        return (expectedScore, mealScore);
+    }
 
     private void Start()
     {

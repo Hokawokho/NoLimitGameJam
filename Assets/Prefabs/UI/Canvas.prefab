@@ -1800,6 +1800,7 @@ GameObject:
   - component: {fileID: 2879033061094038985}
   - component: {fileID: 8712278032997628054}
   - component: {fileID: 1817524124483916212}
+  - component: {fileID: 3925845153161534544}
   m_Layer: 5
   m_Name: Clock
   m_TagString: Untagged
@@ -1865,6 +1866,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3925845153161534544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8801919984144294766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d1e0111cb5b5a4e893c93bbd85477e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circularFill: {fileID: 1817524124483916212}
+  clockHand: {fileID: 3448614403997259897}
 --- !u!1 &8869204886828793510
 GameObject:
   m_ObjectHideFlags: 0

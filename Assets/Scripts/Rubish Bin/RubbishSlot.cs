@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Threading.Tasks;
 using Enums;
 using Managers;
 using UnityEngine;
@@ -26,8 +27,9 @@ public class RubbishSlot : MonoBehaviour
     [SerializeField] private int foodvalue;
     [SerializeField] private nlEnum.PoolObjectTypes inrgidientType;
     
-    private void Start()
+    private async void Start()
     {
+        await Task.Delay(200);
         GetNewTrash();
     }
 
