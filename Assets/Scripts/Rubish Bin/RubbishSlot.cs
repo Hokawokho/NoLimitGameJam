@@ -46,7 +46,7 @@ public class RubbishSlot : MonoBehaviour
                 initialStackingPitch = maxPitch;
             }
             
-            //SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.TrashClickSuccess, pitch);
+            SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.TrashClickSuccess, pitch);
             SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.IngiStack, initialStackingPitch);
             rubbishBinAnimator.Play("binMovement", 0,0f);
             StartCoroutine(SendRubbish());
@@ -84,12 +84,60 @@ public class RubbishSlot : MonoBehaviour
     {
         switch (food)
         {
-            case nlEnum.PoolObjectTypes.Patty:
+            case nlEnum.PoolObjectTypes.Cheese:
                 rubbish.GetComponent<Image>().sprite = icons[0];
                 break;
             
-            case nlEnum.PoolObjectTypes.Cheese:
+            case nlEnum.PoolObjectTypes.BadEgg:
                 rubbish.GetComponent<Image>().sprite = icons[1];
+                break;
+            case nlEnum.PoolObjectTypes.BadFish:
+                rubbish.GetComponent<Image>().sprite = icons[2];
+                break;
+            case nlEnum.PoolObjectTypes.BadSteak:
+                rubbish.GetComponent<Image>().sprite = icons[3];
+                break;
+            case nlEnum.PoolObjectTypes.Beetroot:
+                rubbish.GetComponent<Image>().sprite = icons[4];
+                break;
+            case nlEnum.PoolObjectTypes.Broccoli:
+                rubbish.GetComponent<Image>().sprite = icons[5];
+                break;
+            case nlEnum.PoolObjectTypes.Boot:
+                rubbish.GetComponent<Image>().sprite = icons[6];
+                break;
+            case nlEnum.PoolObjectTypes.Eyeball:
+                rubbish.GetComponent<Image>().sprite = icons[7];
+                break;
+            case nlEnum.PoolObjectTypes.Rat:
+                rubbish.GetComponent<Image>().sprite = icons[8];
+                break;
+            case nlEnum.PoolObjectTypes.Spaghetti:
+                rubbish.GetComponent<Image>().sprite = icons[9];
+                break;
+            case nlEnum.PoolObjectTypes.Bun_bot:
+                rubbish.GetComponent<Image>().sprite = icons[10];
+                break;
+            case nlEnum.PoolObjectTypes.Patty:
+                rubbish.GetComponent<Image>().sprite = icons[11];
+                break;
+            case nlEnum.PoolObjectTypes.Bun_top:
+                rubbish.GetComponent<Image>().sprite = icons[12];
+                break;
+            case nlEnum.PoolObjectTypes.Donut:
+                rubbish.GetComponent<Image>().sprite = icons[13];
+                break;
+            case nlEnum.PoolObjectTypes.Pizza:
+                rubbish.GetComponent<Image>().sprite = icons[14];
+                break;
+            case nlEnum.PoolObjectTypes.Tomatoe:
+                rubbish.GetComponent<Image>().sprite = icons[15];
+                break;
+            case nlEnum.PoolObjectTypes.Lettuce:
+                rubbish.GetComponent<Image>().sprite = icons[16];
+                break;
+            case nlEnum.PoolObjectTypes.Bone:
+                rubbish.GetComponent<Image>().sprite = icons[17];
                 break;
         }
     }
