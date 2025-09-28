@@ -42,7 +42,8 @@ public class CustomersManager : GenericSingleton<CustomersManager>
     {
         this.customerImages = customerImages;
     }
-    public void SpawnCustomer()
+
+    private void SpawnCustomer()
     {
         var t = customer.transform;
         t.localScale = Vector3.zero;
@@ -55,7 +56,7 @@ public class CustomersManager : GenericSingleton<CustomersManager>
         OnNewCustomerArrived?.Invoke(ex);
     }
 
-    public void SwitchCustomer()
+    private void SwitchCustomer()
     {
         customer.gameObject.SetActive(false);
         SpawnCustomer();
