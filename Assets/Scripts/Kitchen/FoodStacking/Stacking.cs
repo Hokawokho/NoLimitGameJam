@@ -21,7 +21,7 @@ public class Stacking : MonoBehaviour
 
     [SerializeField] float maxRandomValue;
 
-    private float initialX;
+    private float initialX = 7.73f;
 
     private nlEnum.PoolObjectTypes[] ingredients;
     private int currentIndex = 0;
@@ -30,7 +30,7 @@ public class Stacking : MonoBehaviour
 
     void Start()
     {
-        float initialX = transform.position.x;
+        //float initialX = transform.position.x;
 
         ingredients = (nlEnum.PoolObjectTypes[])System.Enum.GetValues(typeof(nlEnum.PoolObjectTypes));
         
@@ -87,13 +87,13 @@ public class Stacking : MonoBehaviour
         //animator.SetTrigger("stacking");
 
 
-        //float number = Random.Range(minRandomValue, maxRandomValue);
+        float number = Random.Range(minRandomValue, maxRandomValue);
 
         switch (h)
         {
             case (1):
 
-                transform.position = new Vector3(initialX,
+                transform.position = new Vector3(initialX + number,
                                                  transform.position.y + increment1,
                                                  transform.position.z
                                                  );
