@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using DG.Tweening;
+using Gameplay;
 using Managers;
 using UnityEngine;
 
@@ -46,12 +47,12 @@ public class CustomersManager : GenericSingleton<CustomersManager>
     private void SpawnCustomer()
     {
         var t = customer.transform;
-        t.localScale = Vector3.zero;
+        // t.localScale = Vector3.zero;
 
         var ex = UnityEngine.Random.Range(minFoodExpectation, maxFoodExpectation);
         customer.Init(customerImages.GetCustomerImage(), ex);
         customer.gameObject.SetActive(true);
-        t.DOScale(finalScale, 0.2f);
+        // t.DOScale(finalScale, 0.2f);
 
         OnNewCustomerArrived?.Invoke(ex);
     }
