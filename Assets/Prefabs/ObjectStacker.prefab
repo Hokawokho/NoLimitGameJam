@@ -46,8 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   increment1: 0.5
-  increment2: 0.7
-  increment3: 0.9
+  smallIngi2: 0.27
+  botBun3: 0.3
+  badSteak4: 0.7
+  eyeball5: 0.6
+  cheese6: 0.24
   minRandomValue: 0
   maxRandomValue: 0
 --- !u!212 &6838136313412838056
