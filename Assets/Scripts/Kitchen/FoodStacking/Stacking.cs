@@ -22,6 +22,8 @@ public class Stacking : MonoBehaviour
     
     [SerializeField] float cheese6;
 
+    [SerializeField] float boot7;
+
     private int layerCounter = 0;
 
     [SerializeField] float minRandomValue;
@@ -152,6 +154,15 @@ public class Stacking : MonoBehaviour
 
                 transform.position = new Vector3(initialX,
                                                  transform.position.y + cheese6,
+                                                 transform.position.z
+                                                 );
+                layerCounter++;
+                break;
+
+            case (7):
+
+                transform.position = new Vector3(initialX,
+                                                 transform.position.y + boot7,
                                                  transform.position.z
                                                  );
                 layerCounter++;
