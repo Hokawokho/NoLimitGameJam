@@ -1,6 +1,8 @@
 using System; 
 using Enums;
+using Gameplay;
 using Managers;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -20,6 +22,11 @@ public class Bell : MonoBehaviour
         
         stacking.SendFood();
         GameObject shit = GameObject.FindWithTag("SHIT");
-        Destroy(shit);
+        foreach (Transform x in shit.transform)
+        {
+            var i = x.GetComponent<IPoolableObjects>();
+            i.BackToPool();
+        }
+        shit.SetActive(false);
     }
 }

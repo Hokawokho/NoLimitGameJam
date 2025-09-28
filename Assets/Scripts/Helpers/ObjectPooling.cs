@@ -567,6 +567,7 @@ namespace Gameplay
 
         private void ResetObjects(GameObject poolObj , nlEnum.PoolObjectTypes type)
         {
+            poolObj.transform.parent = null;
             poolObj.gameObject.SetActive(false);
             poolObj.transform.SetParent(GetPoolProjectData(type).spawnParent);
             poolObj.transform.position = Vector3.zero;
