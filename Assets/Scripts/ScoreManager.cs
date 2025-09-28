@@ -66,13 +66,20 @@ public class ScoreManager : MonoBehaviour
     
     private void UpdateExpectedScoreLabelPosition()
     {
-        float normalizedScore = expectedScore / (float)MAXSCORE; // Convert to 0-1 range
+        float normalizedScore = expectedScore / (float)MAXSCORE; 
         float targetPosition = Mathf.Lerp(MIN_POSITION, MAX_POSITION, normalizedScore);
-        
-        // Update the X position of the label
-        Vector3 currentPosition = expectedScoreLabel.anchoredPosition;
-        expectedScoreLabel.anchoredPosition = new Vector2(targetPosition, currentPosition.y);
+
+        // Current position
+        Vector2 currentPosition = expectedScoreLabel.anchoredPosition;
+
+        // Smoothly move towards target
+        float smoothSpeed = 5f;
+        float newX = Mathf.Lerp(currentPosition.x, targetPosition, Time.deltaTime * smoothSpeed);
+
+        // Apply new position
+        expectedScoreLabel.anchoredPosition = new Vector2(newX, currentPosition.y);
     }
+
 
     public int GetMealScore()
     {

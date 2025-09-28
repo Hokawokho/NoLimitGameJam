@@ -20,6 +20,7 @@ public class RubbishSlot : MonoBehaviour
     [SerializeField] private ScoreManager scoreManager;
     [SerializeField] private Stacking stacking;
     [SerializeField] private Animator rubbishBinAnimator;
+    [SerializeField] private Button rubbishBinButton;
     
     [Header("Settings")]
 
@@ -29,6 +30,27 @@ public class RubbishSlot : MonoBehaviour
     [SerializeField] private float initialStackingPitch;
     [SerializeField] private float maxPitch;
     
+    private void OnEnable()
+    {
+        GameManager.OnServeDone += HandleServerDone;
+        CustomersManager.OnNewCustomerArrived += HandleNewCustomer;
+    }
+    private void OnDisable()
+    {
+        GameManager.OnServeDone -= HandleServerDone;
+        CustomersManager.OnNewCustomerArrived -= HandleNewCustomer;
+    }
+
+    private void HandleNewCustomer(int obj)
+    {
+        rubbishBinButton.interactable = true;
+    }
+
+    private void HandleServerDone()
+    {
+        rubbishBinButton.interactable = false;
+    }
+
     private async void Start()
     {
         await Task.Delay(200);
