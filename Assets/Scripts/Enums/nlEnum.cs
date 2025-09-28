@@ -68,6 +68,9 @@ namespace Enums
             Bun_top,
             Donut,
             Pizza,
+            Tomatoe,
+            Lettuce,
+            Bone,
             AudioObject
         }
 
