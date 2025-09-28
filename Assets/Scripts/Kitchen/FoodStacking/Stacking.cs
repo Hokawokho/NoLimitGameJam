@@ -214,9 +214,10 @@ public class Stacking : MonoBehaviour
 
     }
 
-    void SendFood()
+    public void SendFood()
     {
         GameObject parentMeal = new GameObject();
+        parentMeal.tag = "SHIT";
         parentMeal.transform.position = transform.position;
 
 

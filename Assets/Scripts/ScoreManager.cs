@@ -31,8 +31,8 @@ public class ScoreManager : MonoBehaviour
 
     private void HandleNewCustomer(int obj)
     {
+        mealScore = 0;
         expectedScore = obj;
-        
     }
 
     private void OnDisable()

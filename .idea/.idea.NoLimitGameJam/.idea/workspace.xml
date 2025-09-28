@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ae134f65-95cd-49c6-bffd-1da27c0f18bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NoLimitGameJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NoLimitGameJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Rate/ratingEffect.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Rate/ratingEffect.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GodTakeMe.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GodTakeMe.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rubish Bin/RubbishSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rubish Bin/RubbishSlot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Belll/Bell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Belll/Bell.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kitchen/FoodStacking/Stacking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Kitchen/FoodStacking/Stacking.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
