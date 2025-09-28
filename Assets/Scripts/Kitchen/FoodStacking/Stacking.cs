@@ -11,9 +11,16 @@ public class Stacking : MonoBehaviour
 
     [SerializeField] float increment1;
 
-    [SerializeField] float increment2;
+    [SerializeField] float smallIngi2;
 
-    [SerializeField] float increment3;
+    [SerializeField] float botBun3;
+
+    [SerializeField] float badSteak4;
+
+    [SerializeField] float eyeball5;    
+    
+    
+    [SerializeField] float cheese6;
 
     private int layerCounter = 0;
 
@@ -105,7 +112,7 @@ public class Stacking : MonoBehaviour
             case (2):
 
                 transform.position = new Vector3(initialX,
-                                                 transform.position.y + increment2,
+                                                 transform.position.y + smallIngi2,
                                                  transform.position.z
                                                  );
                 layerCounter++;
@@ -116,7 +123,35 @@ public class Stacking : MonoBehaviour
             case (3):
 
                 transform.position = new Vector3(initialX,
-                                                 transform.position.y + increment3,
+                                                 transform.position.y + botBun3,
+                                                 transform.position.z
+                                                 );
+                layerCounter++;
+                break;
+
+            
+            case (4):
+
+                transform.position = new Vector3(initialX,
+                                                 transform.position.y + badSteak4,
+                                                 transform.position.z
+                                                 );
+                layerCounter++;
+                break;
+
+            case (5):
+
+                transform.position = new Vector3(initialX,
+                                                 transform.position.y + eyeball5,
+                                                 transform.position.z
+                                                 );
+                layerCounter++;
+                break; 
+            
+            case (6):
+
+                transform.position = new Vector3(initialX,
+                                                 transform.position.y + cheese6,
                                                  transform.position.z
                                                  );
                 layerCounter++;

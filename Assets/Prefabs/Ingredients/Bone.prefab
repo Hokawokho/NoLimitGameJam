@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4893732837572024127
+--- !u!1 &2808585062193264042
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,38 +8,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5377612094285154696}
-  - component: {fileID: 2922585817157892753}
-  - component: {fileID: 3730279808068036609}
+  - component: {fileID: 6360941066165783677}
+  - component: {fileID: 6360326530377484224}
+  - component: {fileID: 495122922103308654}
   m_Layer: 0
-  m_Name: bad_steak
+  m_Name: Patty
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5377612094285154696
+--- !u!4 &6360941066165783677
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4893732837572024127}
+  m_GameObject: {fileID: 2808585062193264042}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2856288857483836290}
+  m_Father: {fileID: 3953648291748279004}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2922585817157892753
+--- !u!212 &6360326530377484224
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4893732837572024127}
+  m_GameObject: {fileID: 2808585062193264042}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -77,25 +77,25 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1877260001, guid: 3e8bf511d642a224aa067a017fa6122b, type: 3}
+  m_Sprite: {fileID: -2055564404, guid: ccd17d24a0319844d82afabf6a903cb3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.6666667, y: 1.4166666}
+  m_Size: {x: 2, y: 1.0625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &3730279808068036609
+--- !u!95 &495122922103308654
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4893732837572024127}
+  m_GameObject: {fileID: 2808585062193264042}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 75fb90699affc4e46b4b9b0aaba56b27, type: 2}
@@ -110,7 +110,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &8025778001107749422
+--- !u!1 &2989575867997795951
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,43 +118,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2856288857483836290}
-  - component: {fileID: 5200915652258949172}
+  - component: {fileID: 3953648291748279004}
+  - component: {fileID: 5592228743802446971}
   m_Layer: 0
-  m_Name: BadSteak
+  m_Name: Bone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2856288857483836290
+--- !u!4 &3953648291748279004
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8025778001107749422}
+  m_GameObject: {fileID: 2989575867997795951}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.01, y: 2.3, z: 0}
+  m_LocalPosition: {x: 1.01, y: -9.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5377612094285154696}
+  - {fileID: 6360941066165783677}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5200915652258949172
+--- !u!114 &5592228743802446971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8025778001107749422}
+  m_GameObject: {fileID: 2989575867997795951}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35258577de61ad04d833b3d24e4af67f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   value: 0
-  height: 4
-  ingiName: 5
+  height: 1
+  ingiName: 19
