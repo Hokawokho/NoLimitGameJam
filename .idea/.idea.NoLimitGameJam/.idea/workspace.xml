@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ae134f65-95cd-49c6-bffd-1da27c0f18bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NoLimitGameJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NoLimitGameJam/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ColckCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ColckCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ObjectPooler.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ObjectPooler.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GodTakeMe.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GodTakeMe.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestingScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestingScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
