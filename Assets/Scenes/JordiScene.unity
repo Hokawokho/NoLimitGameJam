@@ -285,6 +285,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ObjectStacker
       objectReference: {fileID: 0}
+    - target: {fileID: 8160193824209507510, guid: fbd589ea7ad18a54990afe6205a68002, type: 3}
+      propertyPath: boot7
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 8225917795336050684, guid: fbd589ea7ad18a54990afe6205a68002, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
