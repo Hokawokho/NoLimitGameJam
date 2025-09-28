@@ -137,6 +137,7 @@ public class RubbishSlot : MonoBehaviour
                 rubbish.GetComponent<Image>().sprite = icons[16];
                 break;
             case nlEnum.PoolObjectTypes.Bone:
+                print("BONE");
                 rubbish.GetComponent<Image>().sprite = icons[17];
                 break;
         }

@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae134f65-95cd-49c6-bffd-1da27c0f18bb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NoLimitGameJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NoLimitGameJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/icons/Patty Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/icons/Patty Icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/icons/Spaghetti Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/UI/icons/Spaghetti Icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GodTakeMe.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GodTakeMe.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/GameAudios.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/GameAudios.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rubish Bin/RubbishSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rubish Bin/RubbishSlot.cs" afterDir="false" />
-    </list>
+    <list default="true" id="ae134f65-95cd-49c6-bffd-1da27c0f18bb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
