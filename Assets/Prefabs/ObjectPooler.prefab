@@ -109,3 +109,15 @@ MonoBehaviour:
     spawnParent: {fileID: 7537339249779612039}
     initialSpawnCount: 9
     poolObjectType: 16
+  - prefab: {fileID: 4338903310119138841, guid: 1c40166ecc1f7c54ba8a26c927222556, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 17
+  - prefab: {fileID: 2722547799808890041, guid: 1349fa75832f5af4a9541cbdf8b09208, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 18
+  - prefab: {fileID: 2989575867997795951, guid: 0fdad1d90ed773f499c75bf33cc5a2a3, type: 3}
+    spawnParent: {fileID: 7537339249779612039}
+    initialSpawnCount: 9
+    poolObjectType: 19

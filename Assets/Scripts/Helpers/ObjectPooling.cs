@@ -5,6 +5,7 @@ using Enums;
 using Managers;
 using UnityEngine;
 using UnityEngine.Serialization;
+using static Enums.nlEnum;
 using static UnityEngine.EventSystems.EventTrigger;
 
 namespace Gameplay
@@ -42,6 +43,9 @@ namespace Gameplay
         private List<IngiObj> ingredientListPoolPatty = new List<IngiObj>();
         private List<IngiObj> ingredientListPoolDonut = new List<IngiObj>();
         private List<IngiObj> ingredientListPoolPizza = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolTomatoe = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolLettuce = new List<IngiObj>();
+        private List<IngiObj> ingredientListPoolBone = new List<IngiObj>();
         private List<AudioObject> audioObjectPool = new List<AudioObject>();
        
 
@@ -147,7 +151,24 @@ namespace Gameplay
                     ingredientListPoolPizza.Add(pizza);
                     break;
 
-                    
+
+                case nlEnum.PoolObjectTypes.Tomatoe:
+                    var tomatoe = (IngiObj)poolObject;
+                    ingredientListPoolTomatoe.Add(tomatoe);
+                    break;
+
+                case nlEnum.PoolObjectTypes.Lettuce:
+                    var lettuce = (IngiObj)poolObject;
+                    ingredientListPoolLettuce.Add(lettuce);
+                    break;
+                                    
+                
+                case nlEnum.PoolObjectTypes.Bone:
+                    var bone = (IngiObj)poolObject;
+                    ingredientListPoolBone.Add(bone);
+                    break;
+
+
 
                 case nlEnum.PoolObjectTypes.AudioObject:
                     var audio = (AudioObject)poolObject;
@@ -355,7 +376,44 @@ namespace Gameplay
                     ingredientListPoolPizza.Remove(pizza);
                     pizza.SetParent(null);
                     return pizza;
-                                
+
+                case nlEnum.PoolObjectTypes.Tomatoe:
+                    if (ingredientListPoolTomatoe.Count < 2)
+                    //DO SEPARATE LIST FOR EACH INGRIDIENT
+                    {
+                        var poolObjectData = GetPoolProjectData(nlEnum.PoolObjectTypes.Tomatoe);
+                        Spawn(poolObjectData.prefab, 10, poolObjectData.poolObjectType, poolObjectData.spawnParent);
+                    }
+                    var tomatoe = ingredientListPoolTomatoe[0];
+                    ingredientListPoolTomatoe.Remove(tomatoe);
+                    tomatoe.SetParent(null);
+                    return tomatoe;
+
+                case nlEnum.PoolObjectTypes.Lettuce:
+                    if (ingredientListPoolLettuce.Count < 2)
+                    //DO SEPARATE LIST FOR EACH INGRIDIENT
+                    {
+                        var poolObjectData = GetPoolProjectData(nlEnum.PoolObjectTypes.Lettuce);
+                        Spawn(poolObjectData.prefab, 10, poolObjectData.poolObjectType, poolObjectData.spawnParent);
+                    }
+                    var lettuce = ingredientListPoolLettuce[0];
+                    ingredientListPoolLettuce.Remove(lettuce);
+                    lettuce.SetParent(null);
+                    return lettuce;                
+                
+                case nlEnum.PoolObjectTypes.Bone:
+                    if (ingredientListPoolBone.Count < 2)
+                    //DO SEPARATE LIST FOR EACH INGRIDIENT
+                    {
+                        var poolObjectData = GetPoolProjectData(nlEnum.PoolObjectTypes.Bone);
+                        Spawn(poolObjectData.prefab, 10, poolObjectData.poolObjectType, poolObjectData.spawnParent);
+                    }
+                    var bone = ingredientListPoolBone[0];
+                    ingredientListPoolBone.Remove(bone);
+                    bone.SetParent(null);
+                    return bone;
+
+
 
                 case nlEnum.PoolObjectTypes.AudioObject:
                     if (audioObjectPool.Count < 2)
@@ -479,6 +537,24 @@ namespace Gameplay
                     var pizza = (IngiObj)poolable;
                     ResetObjects(pizza.gameObject, nlEnum.PoolObjectTypes.Pizza);
                     ingredientListPoolPizza.Add(pizza);
+                    break;
+
+                case nlEnum.PoolObjectTypes.Tomatoe:
+                    var tomatoe = (IngiObj)poolable;
+                    ResetObjects(tomatoe.gameObject, nlEnum.PoolObjectTypes.Tomatoe);
+                    ingredientListPoolTomatoe.Add(tomatoe);
+                    break;
+
+                case nlEnum.PoolObjectTypes.Lettuce:
+                    var lettuce = (IngiObj)poolable;
+                    ResetObjects(lettuce.gameObject, nlEnum.PoolObjectTypes.Lettuce);
+                    ingredientListPoolLettuce.Add(lettuce);
+                    break;
+
+                case nlEnum.PoolObjectTypes.Bone:
+                    var bone = (IngiObj)poolable;
+                    ResetObjects(bone.gameObject, nlEnum.PoolObjectTypes.Bone);
+                    ingredientListPoolBone.Add(bone);
                     break;
 
                 case nlEnum.PoolObjectTypes.AudioObject:
