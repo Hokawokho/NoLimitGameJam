@@ -6,7 +6,7 @@ using Gameplay;
 using Managers;
 using UnityEngine;
 
-public class CustomersManager : GenericSingleton<CustomersManager>
+public class CustomersManager : MonoBehaviour
 {
     CustomerImages customerImages;
 
@@ -15,7 +15,7 @@ public class CustomersManager : GenericSingleton<CustomersManager>
 
     float finalScale = 10;
 
-    public event Action<int> OnNewCustomerArrived;
+    public static event Action<int> OnNewCustomerArrived;
     public Customer customer;
     private async void Start()
     {
@@ -25,19 +25,17 @@ public class CustomersManager : GenericSingleton<CustomersManager>
     }
     private void OnEnable()
     {
-        CookTimerHandler.OnTimeDone += OnTimerDone;
+        customer.OnLeavingAnimationDone += SwitchCustomer;
+        GameManager.CustomersManagerInit += Init;
     }
 
     private void OnDisable()
     {
 
-        CookTimerHandler.OnTimeDone -= OnTimerDone;
+        customer.OnLeavingAnimationDone -= SwitchCustomer;
+        GameManager.CustomersManagerInit -= Init;
     }
 
-    private void OnTimerDone()
-    {
-        SwitchCustomer();
-    }
 
     public void Init(CustomerImages customerImages)
     {
@@ -47,19 +45,19 @@ public class CustomersManager : GenericSingleton<CustomersManager>
     private void SpawnCustomer()
     {
         var t = customer.transform;
-        // t.localScale = Vector3.zero;
 
         var ex = UnityEngine.Random.Range(minFoodExpectation, maxFoodExpectation);
-        customer.Init(customerImages.GetCustomerImage(), ex);
-        customer.gameObject.SetActive(true);
-        // t.DOScale(finalScale, 0.2f);
 
-        OnNewCustomerArrived?.Invoke(ex);
+        customer.Init(customerImages.GetCustomerImage(), ex , () =>
+        {
+            OnNewCustomerArrived?.Invoke(ex);
+        });
+        //customer.gameObject.SetActive(true);
     }
 
     private void SwitchCustomer()
     {
-        customer.gameObject.SetActive(false);
+        //customer.gameObject.SetActive(false);
         SpawnCustomer();
     }
 }
