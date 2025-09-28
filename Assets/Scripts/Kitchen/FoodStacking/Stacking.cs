@@ -1,7 +1,11 @@
 using System;
+using System.Collections.Generic;
+using System.Xml.Linq;
 using Enums;
 using Gameplay;
+using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.Animations;
 using UnityEngine.InputSystem;
 using Random = UnityEngine.Random;
 
@@ -35,15 +39,31 @@ public class Stacking : MonoBehaviour
     private nlEnum.PoolObjectTypes[] ingredients;
     private int currentIndex = 0;
 
+    private List<IngiObj> fullMeal = new List<IngiObj>();
+
+    private Vector3 initialPosition;
+
+
+    //[SerializeField] GameObject fullMeal;
+    
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     void Start()
     {
         //float initialX = transform.position.x;
 
+        initialPosition = transform.position;
+
         ingredients = (nlEnum.PoolObjectTypes[])System.Enum.GetValues(typeof(nlEnum.PoolObjectTypes));
         
         Debug.Log("Ingrediente actual: " + ingredients[currentIndex]);
+
+        
+
+        
     }
 
     // Update is called once per frame
@@ -62,6 +82,11 @@ public class Stacking : MonoBehaviour
         if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             CycleIngredient();
+        }
+
+        if (Keyboard.current.qKey.wasPressedThisFrame)
+        {
+            SendFood();
         }
     }
 
@@ -92,6 +117,21 @@ public class Stacking : MonoBehaviour
 
         SpriteRenderer ingredientSprite = o.GetComponentInChildren<SpriteRenderer>();
         ingredientSprite.sortingOrder = layerCounter;
+
+        fullMeal.Add(o);
+        //PositionConstraint positionConstraint = o.GetComponent<PositionConstraint>();
+
+        //ConstraintSource source = new ConstraintSource();
+        ////source.sourceTransform = fullMeal.transform;
+        //source.sourceTransform = transform;
+        //source.weight = 1.0f; 
+
+
+        //positionConstraint.AddSource(source);
+
+        //positionConstraint.locked = true;
+        //positionConstraint.constraintActive = true;
+
 
         //animator.SetTrigger("stacking");
 
@@ -174,8 +214,17 @@ public class Stacking : MonoBehaviour
 
     }
 
-    void StackFood()
+    void SendFood()
     {
-       
+        GameObject parentMeal = new GameObject();
+        parentMeal.transform.position = transform.position;
+
+
+        foreach (IngiObj ingi in fullMeal)
+        {
+            ingi.transform.parent = parentMeal.transform;
+        }
+
+        this.transform.position = initialPosition;
     }
 }

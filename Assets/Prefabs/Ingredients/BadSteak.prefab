@@ -120,6 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2856288857483836290}
   - component: {fileID: 5200915652258949172}
+  - component: {fileID: -2069907584626562284}
   m_Layer: 0
   m_Name: BadSteak
   m_TagString: Untagged
@@ -158,3 +159,21 @@ MonoBehaviour:
   value: 0
   height: 4
   ingiName: 5
+--- !u!1818360608 &-2069907584626562284
+PositionConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8025778001107749422}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Weight: 1
+  m_TranslationAtRest: {x: 1.01, y: 2.3, z: 0}
+  m_TranslationOffset: {x: 0, y: 0, z: 0}
+  m_AffectTranslationX: 1
+  m_AffectTranslationY: 0
+  m_AffectTranslationZ: 0
+  m_Active: 0
+  m_IsLocked: 0
+  m_Sources: []
