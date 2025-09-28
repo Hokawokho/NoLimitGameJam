@@ -26,25 +26,31 @@ public class ScoreManager : MonoBehaviour
     private void OnEnable()
     {
         RatingsManager.GetFoodQuality += RatingsManagerOnGetFoodQuality;
+        CustomersManager.OnNewCustomerArrived += HandleNewCustomer;
+    }
+
+    private void HandleNewCustomer(int obj)
+    {
+        expectedScore = obj;
+        
     }
 
     private void OnDisable()
     {
         RatingsManager.GetFoodQuality -= RatingsManagerOnGetFoodQuality;
+        CustomersManager.OnNewCustomerArrived -= HandleNewCustomer;
     }
 
     private (int, int) RatingsManagerOnGetFoodQuality()
     {
         return (expectedScore, mealScore);
     }
-    
 
     private void Update()
     {
         foodQualityBar.fillAmount = Mathf.Lerp(foodQualityBar.fillAmount, mealScore / (float)MAXSCORE, foodQualityBarSpeed * Time.deltaTime);
 
         foodQualityBar.color = mealScore < expectedScore ? badColor : goodColor;
-        
         UpdateExpectedScoreLabelPosition();
     }
 
@@ -102,4 +108,3 @@ public class ScoreManager : MonoBehaviour
         return MAXSCORE;
     }
 }
-    
