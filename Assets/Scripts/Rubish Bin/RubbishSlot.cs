@@ -35,13 +35,13 @@ public class RubbishSlot : MonoBehaviour
     {
         if (rubbish.activeInHierarchy)
         {
-            //SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.TrashClickSuccess);
+            SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.TrashClickSuccess);
             rubbishBinAnimator.Play("binMovement", 0,0f);
             StartCoroutine(SendRubbish());
         }
         else
         {
-            //SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.TrashClickFail);
+            SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.TrashClickFail);
         }
     }
 
