@@ -64,7 +64,7 @@ namespace Gameplay
             {
                 if (preparedFoodQuality < expectedFoodQuality)
                 {
-                    var per = preparedFoodQuality / preparedFoodQuality;
+                    var per = preparedFoodQuality / expectedFoodQuality;
                     rating = 4 * per;
                 }
             }
