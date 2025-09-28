@@ -9,7 +9,7 @@ namespace Gameplay
         [SerializeField] float maxTimerValue = 10;
         [SerializeField] float minTimerValue = 5;
 
-        public float currentTime, currentMaxTime, maxTimerDifference = 0.25f;
+        public float currentTime, currentMaxTime, timerReductionCount = 4;
         bool canRunTimer;
         private Coroutine timer;
 
@@ -23,7 +23,7 @@ namespace Gameplay
 
         private void OnEnable()
         {
-            CustomersManager.Instance.OnNewCustomerArrived += NewCustomerArrived;
+            CustomersManager.OnNewCustomerArrived += NewCustomerArrived;
             Bell.OnBellHit += StopTimer;
             RatingsManager.GetCurrentTime += OnGetCurrentTime;
         }
@@ -31,7 +31,7 @@ namespace Gameplay
 
         private void OnDisable()
         {
-            CustomersManager.Instance.OnNewCustomerArrived -= NewCustomerArrived;
+            CustomersManager.OnNewCustomerArrived -= NewCustomerArrived;
             Bell.OnBellHit -= StopTimer;
             RatingsManager.GetCurrentTime -= OnGetCurrentTime;
 
@@ -46,6 +46,7 @@ namespace Gameplay
             //UpdateMaxTime();
             SetCurrentTime();
             timer = StartCoroutine(StartTimer());
+            UpdateMaxTime();
         }
 
         //private void Update()
@@ -81,7 +82,14 @@ namespace Gameplay
 
         public void UpdateMaxTime()
         {
-            currentMaxTime -= maxTimerDifference;
+            if(timerReductionCount >= 4)
+            {
+                currentMaxTime -= 1;
+                timerReductionCount = 0;
+                return;
+            }
+
+            timerReductionCount++;
         }
     }
 }

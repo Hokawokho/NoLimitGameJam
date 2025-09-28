@@ -6,7 +6,7 @@ using Gameplay;
 using Managers;
 using UnityEngine;
 
-public class CustomersManager : GenericSingleton<CustomersManager>
+public class CustomersManager : MonoBehaviour
 {
     CustomerImages customerImages;
 
@@ -15,7 +15,7 @@ public class CustomersManager : GenericSingleton<CustomersManager>
 
     float finalScale = 10;
 
-    public event Action<int> OnNewCustomerArrived;
+    public static event Action<int> OnNewCustomerArrived;
     public Customer customer;
     private async void Start()
     {
@@ -26,12 +26,14 @@ public class CustomersManager : GenericSingleton<CustomersManager>
     private void OnEnable()
     {
         CookTimerHandler.OnTimeDone += OnTimerDone;
+        GameManager.CustomersManagerInit += Init;
     }
 
     private void OnDisable()
     {
 
         CookTimerHandler.OnTimeDone -= OnTimerDone;
+        GameManager.CustomersManagerInit -= Init;
     }
 
     private void OnTimerDone()
