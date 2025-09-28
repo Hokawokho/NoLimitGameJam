@@ -37,17 +37,15 @@ public class ScoreManager : MonoBehaviour
     {
         return (expectedScore, mealScore);
     }
-
-    private void Start()
-    {
-        UpdateExpectedScoreLabelPosition();
-    }
+    
 
     private void Update()
     {
         foodQualityBar.fillAmount = Mathf.Lerp(foodQualityBar.fillAmount, mealScore / (float)MAXSCORE, foodQualityBarSpeed * Time.deltaTime);
 
         foodQualityBar.color = mealScore < expectedScore ? badColor : goodColor;
+        
+        UpdateExpectedScoreLabelPosition();
     }
 
     public void AddMealScore(int newScore)
@@ -104,3 +102,4 @@ public class ScoreManager : MonoBehaviour
         return MAXSCORE;
     }
 }
+    
