@@ -1,5 +1,8 @@
-using System;
+using System; 
+using Enums;
+using Managers;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Bell : MonoBehaviour
 {
@@ -10,6 +13,8 @@ public class Bell : MonoBehaviour
     public void BellHit()
     {
         bellAnimator.Play("Bell",0,0f);
+        float  pitch = Random.Range(1f, 1.12f);
+        SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.Bell, pitch);
         OnBellHit?.Invoke();    
     }
 }

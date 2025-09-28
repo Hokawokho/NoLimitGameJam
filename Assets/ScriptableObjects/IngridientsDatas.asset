@@ -28,8 +28,6 @@ MonoBehaviour:
   - value: 12
     inrgidientType: 7
   - value: -10
-    inrgidientType: 8
-  - value: -10
     inrgidientType: 9
   - value: -10
     inrgidientType: 10

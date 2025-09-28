@@ -1638,6 +1638,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5803845123392926901, guid: 15be0aff002eb4c3991e37b3c9276895, type: 3}
+      propertyPath: MAXSCORE
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5803845123392926901, guid: 15be0aff002eb4c3991e37b3c9276895, type: 3}
       propertyPath: badColor.b
       value: 0.598
       objectReference: {fileID: 0}
@@ -1663,7 +1667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5803845123392926901, guid: 15be0aff002eb4c3991e37b3c9276895, type: 3}
       propertyPath: expectedScore
-      value: 50
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 5803845123392926901, guid: 15be0aff002eb4c3991e37b3c9276895, type: 3}
       propertyPath: foodQualityBar
@@ -2135,6 +2139,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5830035269089015879, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fe7c48fa1885c43d3a4dec39d2a60d4c, type: 3}
     - target: {fileID: 6551132674987630699, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
       propertyPath: m_Name
       value: Elroy Flatmate
@@ -2142,7 +2150,7 @@ PrefabInstance:
     - target: {fileID: 8981187335612491083, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 834bd66b59a8948c986bb724931af458, type: 3}
+      objectReference: {fileID: 21300000, guid: 3e1748ef0b0ee444cacf305af7441f14, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2159,6 +2167,22 @@ PrefabInstance:
     - target: {fileID: 1726624447766048871, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804404747942246513, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804404747942246513, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3790261
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804404747942246513, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4804404747942246513, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5148863471536312476, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
       propertyPath: m_Pivot.x
@@ -2241,6 +2265,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6293034259191162931, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
+      propertyPath: maxPitch
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6293034259191162931, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
       propertyPath: stacking
       value: 
       objectReference: {fileID: 259629165}
@@ -2248,6 +2276,10 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1649308709}
+    - target: {fileID: 6293034259191162931, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
+      propertyPath: initialStackingPitch
+      value: 0.85
+      objectReference: {fileID: 0}
     - target: {fileID: 6721260940253772894, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
       propertyPath: m_RaycastTarget
       value: 0
@@ -2257,6 +2289,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8784799381629221295, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
+      propertyPath: maxPitch
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8784799381629221295, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
       propertyPath: stacking
       value: 
       objectReference: {fileID: 259629165}
@@ -2264,6 +2300,14 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1649308709}
+    - target: {fileID: 8784799381629221295, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
+      propertyPath: initialStackingPitch
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8968547596119995843, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
+      propertyPath: maxPitch
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 8968547596119995843, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
       propertyPath: stacking
       value: 
@@ -2272,6 +2316,10 @@ PrefabInstance:
       propertyPath: scoreManager
       value: 
       objectReference: {fileID: 1649308709}
+    - target: {fileID: 8968547596119995843, guid: b749cdcc24ee74ca18902b041eaeca09, type: 3}
+      propertyPath: initialStackingPitch
+      value: 0.85
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

@@ -18,7 +18,7 @@ namespace Managers
             var a = ObjectPooling.Instance.GetAudioObject();
             a.PlaySound(soundsHolderSo.GetAudioClip(gameSounds));
         }
-        public void PlaySound(nlEnum.GameSoundTypes soundType, nlEnum.GameSounds gameSounds, int pitch)
+        public void PlaySound(nlEnum.GameSoundTypes soundType, nlEnum.GameSounds gameSounds, float pitch)
         {
             var a = ObjectPooling.Instance.GetAudioObject();
             a.PlaySound(soundsHolderSo.GetAudioClip(gameSounds), pitch);
