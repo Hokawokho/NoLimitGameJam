@@ -15,8 +15,6 @@ MonoBehaviour:
   data:
   - value: 10
     inrgidientType: 0
-  - value: 10
-    inrgidientType: 2
   - value: -5
     inrgidientType: 3
   - value: -10
@@ -27,8 +25,6 @@ MonoBehaviour:
     inrgidientType: 6
   - value: 12
     inrgidientType: 7
-  - value: -10
-    inrgidientType: 9
   - value: -10
     inrgidientType: 10
   - value: 2
@@ -43,3 +39,9 @@ MonoBehaviour:
     inrgidientType: 15
   - value: 5
     inrgidientType: 16
+  - value: 20
+    inrgidientType: 17
+  - value: 10
+    inrgidientType: 18
+  - value: 10
+    inrgidientType: 18
