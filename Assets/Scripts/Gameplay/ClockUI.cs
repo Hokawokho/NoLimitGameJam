@@ -17,18 +17,21 @@ namespace Gameplay
         {
             CookTimerHandler.UpdateTime += UpdateTime;
             CookTimerHandler.OnTimeDone += OnTimeDone;
+            Bell.OnBellHit += OnTimeDone;
         }
 
         private void OnDisable()
         {
             CookTimerHandler.UpdateTime -= UpdateTime;
             CookTimerHandler.OnTimeDone -= OnTimeDone;
+            Bell.OnBellHit -= OnTimeDone;
 
         }
 
         private void OnTimeDone()
         {
-            circularFill.fillAmount = 1;
+            var newRot = Quaternion.Euler(0, 0, 0);
+
         }
 
         private void UpdateTime(float cuurentTime, float maxTime)
@@ -39,7 +42,7 @@ namespace Gameplay
 
             circularFill.fillAmount = nv ;  
         
-            var newRot = Quaternion.Euler(0,0, -(nv * 360)); 
+            var newRot = Quaternion.Euler(0,0, (nv * 360)); 
             clockHand.rotation = newRot;
         }
 

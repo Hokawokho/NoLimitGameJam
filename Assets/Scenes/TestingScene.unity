@@ -550,7 +550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.91517913, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.9137255, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -608,6 +608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foddQualityExpectation: 0
   spriteRenderer: {fileID: 469113542}
+  animator: {fileID: 469113543}
 --- !u!212 &469113542
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1145,6 +1146,10 @@ PrefabInstance:
     - target: {fileID: 7772332639219598427, guid: 2ea01632000ebc0458ae1332d2dba251, type: 3}
       propertyPath: m_Name
       value: CookTimerHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 8462535361866960122, guid: 2ea01632000ebc0458ae1332d2dba251, type: 3}
+      propertyPath: timerReductionCount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8844174489468782916, guid: 2ea01632000ebc0458ae1332d2dba251, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2282,6 +2287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cdbe9911e63453fbdaba1bf8f869bdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerDonePenalty: 30
 --- !u!4 &2011431118
 Transform:
   m_ObjectHideFlags: 0
