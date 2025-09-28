@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using DG.Tweening;
+using Gameplay;
 using Managers;
 using UnityEngine;
 
@@ -20,7 +21,21 @@ public class CustomersManager : GenericSingleton<CustomersManager>
     {
         await Task.Delay(100);
         SpawnCustomer();
-        await Task.Delay(100);
+        
+    }
+    private void OnEnable()
+    {
+        CookTimerHandler.OnTimeDone += OnTimerDone;
+    }
+
+    private void OnDisable()
+    {
+
+        CookTimerHandler.OnTimeDone -= OnTimerDone;
+    }
+
+    private void OnTimerDone()
+    {
         SwitchCustomer();
     }
 
@@ -28,20 +43,21 @@ public class CustomersManager : GenericSingleton<CustomersManager>
     {
         this.customerImages = customerImages;
     }
-    public void SpawnCustomer()
+
+    private void SpawnCustomer()
     {
         var t = customer.transform;
-        t.localScale = Vector3.zero;
+        // t.localScale = Vector3.zero;
 
         var ex = UnityEngine.Random.Range(minFoodExpectation, maxFoodExpectation);
         customer.Init(customerImages.GetCustomerImage(), ex);
         customer.gameObject.SetActive(true);
-        t.DOScale(finalScale, 0.2f);
+        // t.DOScale(finalScale, 0.2f);
 
         OnNewCustomerArrived?.Invoke(ex);
     }
 
-    public void SwitchCustomer()
+    private void SwitchCustomer()
     {
         customer.gameObject.SetActive(false);
         SpawnCustomer();

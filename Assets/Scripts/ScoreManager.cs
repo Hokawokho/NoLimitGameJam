@@ -1,4 +1,5 @@
 using System;
+using Gameplay;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,8 +8,7 @@ public class ScoreManager : MonoBehaviour
 {
     [Header("References")]
     
-    [SerializeField] private Slider foodQualityBar;
-    [SerializeField] private Image foodQualityBarFill;
+    [SerializeField] private Image foodQualityBar;
     [SerializeField] private RectTransform expectedScoreLabel;
     
     [Header("Settings")]
@@ -19,9 +19,24 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private int mealScore;
     [SerializeField] private int expectedScore;
     [SerializeField] private int foodQualityBarSpeed;
-    
+    [SerializeField] private int MAXSCORE;
     private const float MIN_POSITION = -196.38f;
     private const float MAX_POSITION = 196.38f;
+    
+    private void OnEnable()
+    {
+        RatingsManager.GetFoodQuality += RatingsManagerOnGetFoodQuality;
+    }
+
+    private void OnDisable()
+    {
+        RatingsManager.GetFoodQuality -= RatingsManagerOnGetFoodQuality;
+    }
+
+    private (int, int) RatingsManagerOnGetFoodQuality()
+    {
+        return (expectedScore, mealScore);
+    }
 
     private void Start()
     {
@@ -30,9 +45,9 @@ public class ScoreManager : MonoBehaviour
 
     private void Update()
     {
-        foodQualityBar.value = Mathf.Lerp(foodQualityBar.value, mealScore, foodQualityBarSpeed * Time.deltaTime);
+        foodQualityBar.fillAmount = Mathf.Lerp(foodQualityBar.fillAmount, mealScore / (float)MAXSCORE, foodQualityBarSpeed * Time.deltaTime);
 
-        foodQualityBarFill.color = mealScore < expectedScore ? badColor : goodColor;
+        foodQualityBar.color = mealScore < expectedScore ? badColor : goodColor;
     }
 
     public void AddMealScore(int newScore)
@@ -47,7 +62,7 @@ public class ScoreManager : MonoBehaviour
     
     private void UpdateExpectedScoreLabelPosition()
     {
-        float normalizedScore = expectedScore / 100f; // Convert to 0-1 range
+        float normalizedScore = expectedScore / (float)MAXSCORE; // Convert to 0-1 range
         float targetPosition = Mathf.Lerp(MIN_POSITION, MAX_POSITION, normalizedScore);
         
         // Update the X position of the label
@@ -83,5 +98,9 @@ public class ScoreManager : MonoBehaviour
     private void BadMeal()
     {
         // Lose State
+    }
+    public int GetMaxScore()
+    {
+        return MAXSCORE;
     }
 }

@@ -15,5 +15,31 @@ MonoBehaviour:
   data:
   - value: 10
     inrgidientType: 0
-  - value: -5
+  - value: 10
     inrgidientType: 2
+  - value: -5
+    inrgidientType: 3
+  - value: -10
+    inrgidientType: 4
+  - value: -10
+    inrgidientType: 5
+  - value: 12
+    inrgidientType: 6
+  - value: 12
+    inrgidientType: 7
+  - value: -10
+    inrgidientType: 9
+  - value: -10
+    inrgidientType: 10
+  - value: 2
+    inrgidientType: 11
+  - value: 2
+    inrgidientType: 12
+  - value: 10
+    inrgidientType: 13
+  - value: 2
+    inrgidientType: 14
+  - value: 10
+    inrgidientType: 15
+  - value: 5
+    inrgidientType: 16

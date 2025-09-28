@@ -1,72 +1,88 @@
 ﻿using System;
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
-public class CookTimerHandler : MonoBehaviour
+namespace Gameplay
 {
-    [SerializeField] float maxTimerValue = 10;
-    [SerializeField] float minTimerValue = 5;
-
-    public float currentTime, currentMaxTime, maxTimerDifference = 0.25f;
-    bool canRunTimer;
-
-    public static event Action OnTimeDone;
-    public static event Action<float> UpdateTime;
-
-    private void Awake()
+    public class CookTimerHandler : MonoBehaviour
     {
-        currentMaxTime = maxTimerValue;
-    }
+        [SerializeField] float maxTimerValue = 10;
+        [SerializeField] float minTimerValue = 5;
 
-    private void OnEnable()
-    {
-        CustomersManager.Instance.OnNewCustomerArrived += NewCustomerArrived;
-    }
+        public float currentTime, currentMaxTime, maxTimerDifference = 0.25f;
+        bool canRunTimer;
+        private Coroutine timer;
 
-    private void OnDisable()
-    {
-        CustomersManager.Instance.OnNewCustomerArrived -= NewCustomerArrived;
-
-    }
-
-    private void NewCustomerArrived(int dummy)
-    {
-        UpdateMaxTime();
-        SetCurrentTime();
-        StartCoroutine(StartTimer());
-    }
-
-    //private void Update()
-    //{
-    //    if (!canRunTimer) return;
-
-    //    if(currentTime > 0)
-    //    {
-    //        currentTime -= Time.deltaTime;
-    //    }
-    //}
-
-    IEnumerator StartTimer()
-    {
-        while (currentTime > 0)
+        public static event Action OnTimeDone;
+        public static event Action<float,float> UpdateTime;
+        
+        private void Awake()
         {
-            currentTime--;
-            UpdateTime?.Invoke(currentTime);
-            yield return new WaitForSeconds(1);
+            currentMaxTime = maxTimerValue;
         }
-        OnTimeDone?.Invoke();
-    }
 
-    void SetCurrentTime()
-    {
-        currentTime = currentMaxTime;
-    }
+        private void OnEnable()
+        {
+            CustomersManager.Instance.OnNewCustomerArrived += NewCustomerArrived;
+            Bell.OnBellHit += StopTimer;
+            RatingsManager.GetCurrentTime += OnGetCurrentTime;
+        }
 
-    public void UpdateMaxTime()
-    {
-        currentMaxTime -= maxTimerDifference;
+
+        private void OnDisable()
+        {
+            CustomersManager.Instance.OnNewCustomerArrived -= NewCustomerArrived;
+            Bell.OnBellHit -= StopTimer;
+            RatingsManager.GetCurrentTime -= OnGetCurrentTime;
+
+        }
+        private float OnGetCurrentTime()
+        {
+            return currentTime;
+        }
+
+        private void NewCustomerArrived(int dummy)
+        {
+            //UpdateMaxTime();
+            SetCurrentTime();
+            timer = StartCoroutine(StartTimer());
+        }
+
+        //private void Update()
+        //{
+        //    if (!canRunTimer) return;
+
+        //    if(currentTime > 0)
+        //    {
+        //        currentTime -= Time.deltaTime;
+        //    }
+        //}
+
+        IEnumerator StartTimer()
+        {
+            while (currentTime > 0)
+            {
+                currentTime--;
+                UpdateTime?.Invoke(currentTime,currentMaxTime);
+                yield return new WaitForSeconds(1);
+            }
+            OnTimeDone?.Invoke();
+        }
+
+        public void StopTimer()
+        {
+            StopCoroutine(timer);
+        }
+
+        void SetCurrentTime()
+        {
+            currentTime = currentMaxTime;
+        }
+
+        public void UpdateMaxTime()
+        {
+            currentMaxTime -= maxTimerDifference;
+        }
     }
 }
 
