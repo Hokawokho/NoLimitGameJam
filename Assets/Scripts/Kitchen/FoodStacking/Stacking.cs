@@ -66,29 +66,7 @@ public class Stacking : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Keyboard.current.sKey.wasPressedThisFrame)
-        {
-            ShowFood(ingredients[currentIndex]);
-        }
 
-        if (Keyboard.current.aKey.wasPressedThisFrame)
-        {
-            ShowFood(nlEnum.PoolObjectTypes.Boot);
-        }
-
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
-        {
-            CycleIngredient();
-        }
-
-        if (Keyboard.current.qKey.wasPressedThisFrame)
-        {
-            SendFood();
-        }
-    }
 
     private void CycleIngredient()
     {

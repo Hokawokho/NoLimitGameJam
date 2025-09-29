@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 public class Bell : MonoBehaviour
 {
     [SerializeField] private Animator bellAnimator;
-    [SerializeField] private Stacking stacking;
+
     public static event Action OnBellHit;
 
     public void BellHit()
@@ -19,14 +19,5 @@ public class Bell : MonoBehaviour
         SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.Bell, pitch);
         
         OnBellHit?.Invoke();    
-        
-        stacking.SendFood();
-        GameObject shit = GameObject.FindWithTag("SHIT");
-        foreach (Transform x in shit.transform)
-        {
-            var i = x.GetComponent<IPoolableObjects>();
-            i.BackToPool();
-        }
-        shit.SetActive(false);
     }
 }

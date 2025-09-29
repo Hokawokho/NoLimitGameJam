@@ -23,25 +23,23 @@ MonoBehaviour:
     inrgidientType: 5
   - value: 12
     inrgidientType: 6
-  - value: 12
+  - value: 20
     inrgidientType: 7
   - value: -10
     inrgidientType: 10
   - value: 2
     inrgidientType: 11
-  - value: 2
-    inrgidientType: 12
   - value: 10
+    inrgidientType: 12
+  - value: 30
     inrgidientType: 13
-  - value: 2
+  - value: 5
     inrgidientType: 14
   - value: 10
     inrgidientType: 15
-  - value: 5
+  - value: 20
     inrgidientType: 16
   - value: 20
     inrgidientType: 17
-  - value: 10
-    inrgidientType: 18
   - value: 10
     inrgidientType: 18

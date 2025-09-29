@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Gameplay
 {
@@ -64,8 +65,27 @@ namespace Gameplay
             {
                 if (preparedFoodQuality < expectedFoodQuality)
                 {
-                    var per = preparedFoodQuality / expectedFoodQuality;
-                    rating = 4 * per;
+                    int r = Random.Range(0, 100);
+                    if (r < 25)
+                    {
+                        rating = 0;
+                    }
+                    else if (r > 25 & r < 50)
+                    {
+                        rating = 1;
+                    }
+                    else if (r > 50 & r < 75)
+                    {
+                        rating = 2;
+                    }
+                    else if (r > 75 & r < 85)
+                    {
+                        rating = 3;
+                    }
+                    else
+                    {
+                        rating = 4;
+                    }
                 }
             }
 
