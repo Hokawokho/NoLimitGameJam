@@ -6,16 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ae134f65-95cd-49c6-bffd-1da27c0f18bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NoLimitGameJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NoLimitGameJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Plus Star Effect.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Plus Star Effect.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator/Data/Behaviors/PendulumBehavior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator/Data/Behaviors/PendulumBehavior.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/GodTakeMe.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GodTakeMe.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScriptableObjects/IngridientsDatas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ScriptableObjects/IngridientsDatas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Belll/Bell.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Belll/Bell.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/RatingsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/RatingsManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Kitchen/FoodStacking/Stacking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Kitchen/FoodStacking/Stacking.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_PipelineAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_PipelineAsset.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Customer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +19,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Belll/Bell.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enums/nlEnum.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Customer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/Deactivate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/IPoolableObjects.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/ReLoadScene.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Kitchen/FoodStacking/Stacking.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Rubish Bin/RubbishSlot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -136,6 +134,7 @@
       <workItem from="1758829921377" duration="3742000" />
       <workItem from="1758884742359" duration="446000" />
       <workItem from="1759062881090" duration="2506000" />
+      <workItem from="1759243793963" duration="1260000" />
     </task>
     <servers />
   </component>

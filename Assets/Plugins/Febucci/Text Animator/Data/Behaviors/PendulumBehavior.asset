@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PendulumBehavior
   m_EditorClassIdentifier: 
   tagID: pend
-  baseAmplitude: 24.7
+  baseAmplitude: 10
   baseFrequency: 3.1
-  baseWaveSize: 0.2
+  baseWaveSize: 0.1
   anchorBottom: 0

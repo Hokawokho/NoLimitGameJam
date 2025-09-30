@@ -8,6 +8,13 @@ public class Customer : MonoBehaviour
     private Action callback;
     [SerializeField] SpriteRenderer spriteRenderer;
     [SerializeField] Animator animator;
+    
+    [Header("Sprite Handle")]
+    [SerializeField] Sprite[] baseSprites;
+    [SerializeField] Sprite[] elroySprites;
+    [SerializeField] Sprite[] girlSprites;
+    [SerializeField] Sprite[] brownSprites;
+
 
     int idleHash, happyLeavingHash, madLeavingHash, spawnHash;
 
@@ -37,10 +44,38 @@ public class Customer : MonoBehaviour
         if(rating <= 2)
         {
             animator.SetBool(madLeavingHash, true);
+
+            if (spriteRenderer.sprite == baseSprites[0])
+            {
+                // boy sprite angry
+                spriteRenderer.sprite = elroySprites[0];
+            }
+            else if (spriteRenderer.sprite == baseSprites[1])
+            {
+                spriteRenderer.sprite = girlSprites[0];
+            }
+            else
+            {
+                spriteRenderer.sprite = brownSprites[0];
+            }
         }
         else
         {
             animator.SetBool(happyLeavingHash, true);
+            
+            if (spriteRenderer.sprite == baseSprites[0])
+            {
+                // boy sprite angry
+                spriteRenderer.sprite = elroySprites[1];
+            }
+            else if (spriteRenderer.sprite == baseSprites[1])
+            {
+                spriteRenderer.sprite = girlSprites[1];
+            }
+            else
+            {
+                spriteRenderer.sprite = brownSprites[1];
+            }
         }
     }
 

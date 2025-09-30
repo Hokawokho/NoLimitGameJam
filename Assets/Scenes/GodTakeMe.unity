@@ -3233,6 +3233,7 @@ GameObject:
   - component: {fileID: 1901715296}
   - component: {fileID: 1901715298}
   - component: {fileID: 1901715297}
+  - component: {fileID: 1901715299}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -3358,6 +3359,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901715295}
   m_CullTransparentMesh: 1
+--- !u!114 &1901715299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901715295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ace8ced0e81c847968cdca0aeda757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typewriterStartsAutomatically: 0
+  animationLoop: 0
+  timeScale: 0
+  _text: Press R to restart
+  useDynamicScaling: 1
+  referenceFontSize: 10
+  isResettingTimeOnNewText: 1
+  useDefaultDatabases: 1
+  databaseBehaviors: {fileID: 11400000, guid: 0772266e475ed45aabcd3e1d19c53fed, type: 2}
+  databaseAppearances: {fileID: 11400000, guid: a817ae5633a8b4f32912e26ddfebde84, type: 2}
+  useDefaultStyleSheet: 1
+  styleSheet: {fileID: 0}
+  databaseActions: {fileID: 11400000, guid: c4d43c477549d49539848902e99bc393, type: 2}
+  defaultAppearancesTags:
+  - size
+  defaultDisappearancesTags:
+  - fade
+  defaultBehaviorsTags:
+  - pend
+  defaultTagsMode: 0
 --- !u!1 &1934770926
 GameObject:
   m_ObjectHideFlags: 0
@@ -3682,6 +3715,66 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5831291177417481733, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: baseSprites.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831291177417481733, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: girlSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831291177417481733, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: brownSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831291177417481733, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: elroySprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831291177417481733, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: 'baseSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: fe7c48fa1885c43d3a4dec39d2a60d4c, type: 3}
+    - target: {fileID: 5831291177417481733, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: 'baseSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 5aa44b318e537477eaea9c9c39bdeb13, type: 3}
+    - target: {fileID: 5831291177417481733, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: 'baseSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 21300000, guid: f7ce11d30553b49a39706dba22886213, type: 3}
+    - target: {fileID: 5831291177417481733, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: 'girlSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 29aa56a21a50a415184a31de86c24c89, type: 3}
+    - target: {fileID: 5831291177417481733, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: 'girlSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: ba41074efe81e4980a8bc951fae7a87a, type: 3}
+    - target: {fileID: 5831291177417481733, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: 'girlSprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 7802815ec4e194d1085e607d5f10338e, type: 3}
+    - target: {fileID: 5831291177417481733, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: 'brownSprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 4aa8fefd49c8745c48cac16a4d5c97a9, type: 3}
+    - target: {fileID: 5831291177417481733, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: 'brownSprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 7802815ec4e194d1085e607d5f10338e, type: 3}
+    - target: {fileID: 5831291177417481733, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: 'elroySprites.Array.data[0]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 3e1748ef0b0ee444cacf305af7441f14, type: 3}
+    - target: {fileID: 5831291177417481733, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: 'elroySprites.Array.data[1]'
+      value: 
+      objectReference: {fileID: 21300000, guid: ae20beef08fc3439c9a260fde0282f2b, type: 3}
+    - target: {fileID: 5831291177417481733, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
+      propertyPath: 'elroySprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: 21300000, guid: 4aa8fefd49c8745c48cac16a4d5c97a9, type: 3}
     - target: {fileID: 6551132674987630699, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
       propertyPath: m_Name
       value: Elroy Flatmate
@@ -3689,7 +3782,7 @@ PrefabInstance:
     - target: {fileID: 8981187335612491083, guid: 799af0b0b0e68497b991346ee0ce517b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5aa44b318e537477eaea9c9c39bdeb13, type: 3}
+      objectReference: {fileID: 21300000, guid: fe7c48fa1885c43d3a4dec39d2a60d4c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

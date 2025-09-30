@@ -15,3 +15,4 @@ MonoBehaviour:
   customerImages:
   - {fileID: 21300000, guid: 5aa44b318e537477eaea9c9c39bdeb13, type: 3}
   - {fileID: 21300000, guid: fe7c48fa1885c43d3a4dec39d2a60d4c, type: 3}
+  - {fileID: 21300000, guid: f7ce11d30553b49a39706dba22886213, type: 3}
