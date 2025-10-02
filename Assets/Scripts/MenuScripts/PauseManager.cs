@@ -8,7 +8,7 @@ public class PauseManager : MonoBehaviour
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
 
-    private AudioSource music;
+    [SerializeField]private AudioSource music;
 
 
     void Awake()
