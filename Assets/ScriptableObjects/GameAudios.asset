@@ -19,5 +19,7 @@ MonoBehaviour:
     gameSounds: 1
   - AudioClip: {fileID: 8300000, guid: 2db0f24d355f64d4cbe341c2e9e18940, type: 3}
     gameSounds: 4
-  - AudioClip: {fileID: 8300000, guid: 6a6f3459903ac7d4d875d1d7d176e4f7, type: 3}
-    gameSounds: 2
+  - AudioClip: {fileID: 8300000, guid: 02498e6adb85b284d821fa35ca5c9c25, type: 3}
+    gameSounds: 5
+  - AudioClip: {fileID: 8300000, guid: 693af755523902f46bae55220718d27f, type: 3}
+    gameSounds: 6

@@ -49,6 +49,7 @@ public class RubbishSlot : MonoBehaviour
     private void HandleServerDone()
     {
         rubbishBinButton.interactable = false;
+        initialStackingPitch = 0;
     }
 
     private async void Start()

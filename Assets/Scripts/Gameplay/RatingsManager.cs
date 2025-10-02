@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Enums;
+using Managers;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -60,7 +62,11 @@ namespace Gameplay
                 preparedFoodQuality -= timerDonePenalty;
             }
             var rating = 5;
-            if(preparedFoodQuality <= 0) rating = 0;
+            if (preparedFoodQuality <= 0)
+            {
+                SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.MealFail, 1);
+                rating = 0;
+            }
             else
             {
                 if (preparedFoodQuality < expectedFoodQuality)
@@ -69,23 +75,32 @@ namespace Gameplay
                     if (r < 25)
                     {
                         rating = 0;
+                        SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.MealFail, 1);
                     }
                     else if (r > 25 & r < 50)
                     {
                         rating = 1;
+                        SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.MealFail, 1);
                     }
                     else if (r > 50 & r < 75)
                     {
                         rating = 2;
+                        SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.MealFail, 1);
                     }
                     else if (r > 75 & r < 85)
                     {
                         rating = 3;
+                        SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.MealSuccess, 1);
                     }
                     else
                     {
                         rating = 4;
+                        SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.MealSuccess, 1);
                     }
+                }
+                else
+                {
+                    SoundsManager.Instance.PlaySound(nlEnum.GameSoundTypes.Sfx, nlEnum.GameSounds.MealSuccess, 1);
                 }
             }
 

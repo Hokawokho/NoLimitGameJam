@@ -8,7 +8,9 @@ namespace Enums
             TrashClickFail,
             IngiStack,
             IngiClick,
-            Bell
+            Bell,
+            MealSuccess,
+            MealFail
         }
 
         public enum GameSoundTypes

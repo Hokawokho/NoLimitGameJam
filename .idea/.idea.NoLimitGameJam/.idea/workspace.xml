@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ae134f65-95cd-49c6-bffd-1da27c0f18bb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NoLimitGameJam/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NoLimitGameJam/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator/Data/Behaviors/PendulumBehavior.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Febucci/Text Animator/Data/Behaviors/PendulumBehavior.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GodTakeMe.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GodTakeMe.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Customer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Customer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enums/nlEnum.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enums/nlEnum.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/RatingsManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/RatingsManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Rubish Bin/RubbishSlot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Rubish Bin/RubbishSlot.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +22,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Belll/Bell.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enums/nlEnum.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Customer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/CustomersManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/Deactivate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/IPoolableObjects.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Helpers/ReLoadScene.cs" root0="FORCE_HIGHLIGHTING" />
@@ -135,6 +136,7 @@
       <workItem from="1758884742359" duration="446000" />
       <workItem from="1759062881090" duration="2506000" />
       <workItem from="1759243793963" duration="1260000" />
+      <workItem from="1759411118207" duration="421000" />
     </task>
     <servers />
   </component>
